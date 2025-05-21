@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+    </style>
+</head>
+<body class="bg-black">
+<!-- Hero Section -->
+<section class="hero aspect-video border border-white flex items-center justify-center">
+        <div class="justify-center flex flex-col items-center p-10 border-white border ">
+            <div class="countdown flex justify-center gap-2 items-center mb-4">
+                <div class="flex flex-col items-center justify-center">     
+                    <div class="flex flex-row gap-2">     
+                        <div class="digit bg-white text-black text-5xl p-5 items-center justify-center rounded-md font-mono">0</div>
+                        <div class="digit bg-white text-black text-5xl p-5 items-center justify-center rounded-md font-mono">0</div>
+                    </div>
+                    <div class="text-white justify-center items-center italic mt-2">Days</div>
+                </div>
+                <div class="separator text-white text-5xl font-mono mb-6">:</div>
+                <div class="flex flex-col items-center justify-center">     
+                    <div class="flex flex-row gap-2">     
+                        <div class="digit bg-white text-black text-5xl p-5 items-center justify-center rounded-md font-mono">0</div>
+                        <div class="digit bg-white text-black text-5xl p-5 items-center justify-center rounded-md font-mono">0</div>
+                    </div>
+                    <div class="text-white justify-center items-center italic mt-2">Hours</div>
+                </div>
+                <div class="separator text-white text-5xl font-mono mb-6">:</div>
+                <div class="flex flex-col items-center justify-center">     
+                    <div class="flex flex-row gap-2">     
+                        <div class="digit bg-white text-black text-5xl p-5 items-center justify-center rounded-md font-mono">0</div>
+                        <div class="digit bg-white text-black text-5xl p-5 items-center justify-center rounded-md font-mono">0</div>
+                    </div>
+                    <div class="text-white justify-center items-center italic mt-2">Minutes</div>
+                </div>
+            </div>
+            <br><br>    
+            <h1 class="text-white text-5xl font-semibold"> Ayo Submit Karyamu !</h1>
+            <br>
+            <h3 class="text-white text-3xl italic mb-5"> Jangan lupa baca syarat dan ketentuannya dulu ya!</h3>
+            <button class="submit-btn bg-emerald-400 px-20 py-5 rounded-3xl mt-4 text-xl">See More</button>
+        </div>
+    </section>
+<br><br><br><br><br><br><br><br>
+    <!-- Deskripsi Section -->
+     <section class="deskripsi">
+        <div class="flex flex-col justify-center items-center text-center text-white  mx-auto max-w-5xl">
+            <h1 class="text-5xl font-bold">Lorem ipsum dolor sit amet.</h1>
+            <br>
+            <p class="max-w-2xl mx-auto italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, blanditiis explicabo. Mollitia ex ab aliquid quis, commodi dolores. Labore, beatae.</p>
+            <br>
+            <br>
+            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae autem laborum repellat ab animi! Non asperiores necessitatibus voluptatem! Sequi quibusdam officia expedita soluta incidunt deserunt quidem accusamus nihil quasi tenetur adipisci voluptatibus praesentium magnam aspernatur veritatis quaerat culpa dignissimos, voluptate perspiciatis fuga. Incidunt delectus tenetur fugiat exercitationem. Sit magni modi iusto. Totam perferendis alias facilis voluptates porro. Laborum necessitatibus blanditiis vel consequuntur rerum obcaecati molestiae provident, ratione quia, perspiciatis voluptas aut ullam enim molestias nemo neque delectus quidem atque? Ducimus facilis maiores omnis doloremque doloribus, totam et debitis amet nulla vel excepturi vero similique quidem qui error esse culpa reiciendis atque adipisci earum vitae, aut quibusdam voluptate nam! Non nulla laudantium iusto id minus obcaecati, necessitatibus voluptas odit corporis tempora dolore, dignissimos quod asperiores dolorem veniam, accusantium officia ab? Quidem vitae expedita fugiat maxime laudantium, alias minima rerum architecto ipsum quae ipsam mollitia nisi commodi, voluptate iste et perspiciatis modi?</p>
+        </div>
+     </section>
+<br><br><br><br><br><br><br><br>
+<!-- Tomeline Section -->
+ <section class="timeline flex justify-center">
+        <img src="./img/timelinesementara.png" alt="">
+ </section>
+ <br><br><br><br><br><br><br><br>
+
+ <!-- Prize Section -->
+<section class="prize flex flex-col justify-center">
+    <h1 class="text-6xl font-bold text-white text-center mb-32">Prizes</h1>
+    <img src="./img/prizesementara.png" class="w-full" alt="">
+</section>
+<br><br><br><br><br><br><br><br>
+
+<!-- Ketentuan Umum Section -->
+<h1 class="text-center text-white text-5xl font-bold"> Ketentuan Umum</h1>
+<br><br>
+ <div class="relative">
+     <div class="pointer-events-none absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-black to-transparent z-10"></div>
+     <section class="umum flex overflow-x-auto snap-x snap-mandatory gap-20 px-64 scrollbar-hide  ">
+         <div class="snap-center shrink-0 w-10/12 rounded-3xl p-40 py-32 bg-slate-900 text-white">
+             <h1 class="font-bold text-center text-5xl mb-10">Syarat dan Ketentuan</h1>
+             
+             <ol class="list-decimal list-outside space-y-4">  
+                 <li>Lomba bersifat individu. Karya hasil kolaborasi atau kelompok dianggap tidak memenuhi syarat.</li>
+                 <li>Peserta hanya boleh mengikuti satu mata lomba.</li>
+                 <li>Terbuka untuk umum dengan rentang usia 16-25 tahun.</li>
+                 <li>Setiap peserta hanya boleh mengirimkan 1 (satu) karya.</li>
+                 <li>Karya tidak diperkenankan menggunakan AI (Artificial Intelligence).</li>
+                 <li>Karya yang dikirimkan harus orisinil, tidak terikat oleh hak cipta apapun, belum pernah dipublikasikan di media apapun, dilombakan, atau menjadi pemenang di perlombaan lain.</li>
+                 <li>Peserta wajib mengikuti tema yang telah ditentukan.</li>
+                 <li>Keputusan juri bersifat mutlak dan tidak dapat diganggu gugat. Bila didapati kecurangan, pihak panitia dan juri berhak untuk mengubah keputusan.</li>
+                 <li>Kompetisi ini tidak dipungut biaya apapun.</li>
+                </ol>
+                <br><br><br>
+                <h1 class="font-bold text-center text-5xl mb-10">Hak Cipta</h1>
+                
+                <ol class="list-decimal list-outside space-y-4">  
+                    <li>Hak cipta karya tetap milik peserta.</li>
+                    <li>Namun, panitia berhak menggunakan karya untuk keperluan publikasi acara dengan tetap mencantumkan kredit pada pembuat.</li>
+                </ol>   
+            </div>
+            
+            <div class="snap-center shrink-0 w-10/12 rounded-3xl p-40 py-32 bg-slate-900 text-white">
+                <h1 class="font-bold text-center text-5xl mb-10">Syarat dan Ketentuan</h1>
+                
+                <ol class="list-decimal list-outside space-y-4">  
+                    <li>Lomba bersifat individu. Karya hasil kolaborasi atau kelompok dianggap tidak memenuhi syarat.</li>
+                    <li>Peserta hanya boleh mengikuti satu mata lomba.</li>
+                    <li>Terbuka untuk umum dengan rentang usia 16-25 tahun.</li>
+                    <li>Setiap peserta hanya boleh mengirimkan 1 (satu) karya.</li>
+                    <li>Karya tidak diperkenankan menggunakan AI (Artificial Intelligence).</li>
+                    <li>Karya yang dikirimkan harus orisinil, tidak terikat oleh hak cipta apapun, belum pernah dipublikasikan di media apapun, dilombakan, atau menjadi pemenang di perlombaan lain.</li>
+                    <li>Peserta wajib mengikuti tema yang telah ditentukan.</li>
+                    <li>Keputusan juri bersifat mutlak dan tidak dapat diganggu gugat. Bila didapati kecurangan, pihak panitia dan juri berhak untuk mengubah keputusan.</li>
+                    <li>Kompetisi ini tidak dipungut biaya apapun.</li>
+                </ol>
+                <br><br><br>
+                <h1 class="font-bold text-center text-5xl mb-10">Hak Cipta</h1>
+                
+                <ol class="list-decimal list-outside space-y-4">  
+                    <li>Hak cipta karya tetap milik peserta.</li>
+                    <li>Namun, panitia berhak menggunakan karya untuk keperluan publikasi acara dengan tetap mencantumkan kredit pada pembuat.</li>
+                </ol>   
+            </div>
+        </section>
+    </div>
+
+
+
+    </body>
+
+<script>
+</script>
+</html>

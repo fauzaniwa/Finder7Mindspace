@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CDN Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!--  Font -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              work: ['Work Sans'],
+            },
+            animation: {
+              'spin-slow': 'spin 4s linear infinite',
+              'loop-scroll': 'loop-scroll 10s linear infinite',
+            },
+            keyframes: {
+              'loop-scroll': {
+                from: { transform: 'translateX(0)' },
+                to: { transform: 'translateX(-100%)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- ----------- -->
+
+    <style type="text/tailwindcss">
+      * {
+        /* border: 1px solid red; */
+      }
+      .navbar-scrolled {
+        box-shadow: 2px 2px 30px #000000;
+      }
+      .ext-scrolled {
+        color: black;
+      }
+      .navbar {
+        transition: all 0.5s;
+      }
+    </style>
+    <!-- Title Web & Icon -->
+    <title>List Lomba</title>
+    <link rel="icon" href="./img/FinderLogo.svg" type="image/x-icon" />
+    <!-- Script Navbar Menu -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Script Cursor -->
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+    <!-- Script Cursor -->
+  </head>
+  <body>
+    <section id="" class="max-w-full flex lg:h-screen h-full">
+      <div class="w-full lg:h-full">
+        <div class="flex gap-0 flex-col lg:flex-row lg:h-full w-full">
+          <!-- Lomba1 -->
+          <div class="flex gap-0 flex-col w-full h-full">
+            <div style="background-image: url(./img/lombabranding.png)" class="bg-cover flex flex-col justify-center items-center gap-3 h-full w-full text-white bg-zinc-400 max-md:px-5">
+              <div class="flex flex-col items-center justify-center gap-3 w-full h-full px-10 py-20 bg-black bg-opacity-0 lg:hover:bg-opacity-40 duration-300">
+                <div class="shrink-0 mt-16 bg-[#ffffff] flex items-center justify-center h-[99px] rounded-[72px] w-[99px] max-md:mt-10"><img src="./img/lombabranding.svg" alt=""></div>
+                <div class="text-white text-2xl md:text-3xl font-semibold font-work text-center">Lomba Branding</div>
+                <div class="text-white text-lg md:text-xl font-light font-work text-center">Mendesain Lomba Packaging Dengan Tema XXX</div>
+                <a href="detaillomba.html" target="_blank"><button style="font-family: 'Work Sans'" class="border-[1px] hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">Pelajari Lebih Lanjut</button></a>
+              </div>
+            </div>
+          </div>
+          <!-- Lomba1 -->
+          <div class="flex flex-col w-full h-full">
+            <div style="background-image: url(./img/lombailustrasi.png)" class="bg-cover flex flex-col justify-center items-center gap-3 h-full w-full text-white bg-neutral-200 max-md:px-5">
+                <div class="flex flex-col items-center justify-center gap-3 w-full h-full px-10 py-20 bg-black bg-opacity-0 lg:hover:bg-opacity-40 duration-300">
+              <div class="shrink-0 mt-16 bg-[#ffffff] flex items-center justify-center h-[99px] rounded-[72px] w-[99px] max-md:mt-10"><img src="./img/lombailustrasi.svg" alt=""></div>
+              <div class="text-white text-2xl md:text-3xl font-semibold font-work text-center">Lomba Ilustrasi</div>
+              <div class="text-white text-lg md:text-xl font-light font-work text-center">Mendesain Lomba Packaging Dengan Tema XXX</div>
+              <a href="detaillomba.html" target="_blank"><button style="font-family: 'Work Sans'" class="border-[1px] hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">Pelajari Lebih Lanjut</button></a>
+            </div>
+            </div>
+          </div>
+          <!-- Lomba1 -->
+          <div class="flex flex-col w-full h-full">
+            <div style="background-image: url(./img/lombapackaging.png)" class="bg-cover flex flex-col justify-center items-center gap-3 h-full w-full text-white bg-zinc-400 max-md:px-5">
+                <div class="flex flex-col items-center justify-center gap-3 w-full h-full px-10 py-20 bg-black bg-opacity-0 lg:hover:bg-opacity-40 duration-300">
+              <div class="shrink-0 mt-16 bg-[#ffffff] flex items-center justify-center h-[99px] rounded-[72px] w-[99px] max-md:mt-10"><img src="./img/lombapackaging.svg" alt=""></div>
+              <div class="text-white text-2xl md:text-3xl font-semibold font-work text-center">Lomba Packaging</div>
+              <div class="text-white text-lg md:text-xl font-light font-work text-center">Mendesain Lomba Packaging Dengan Tema XXX</div>
+              <a href="detaillomba.html" target="_blank"><button style="font-family: 'Work Sans'" class="border-[1px] hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">Pelajari Lebih Lanjut</button></a>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!-- Cursor CDN -->
+  <script src="https://unpkg.com/kursor"></script>
+  <script>
+    new kursor({
+      type: 4,
+      removeDefaultCursor: true,
+      color: '#ffffff',
+    });
+  </script>
+  <!-- Cursor CDN -->
+</html>

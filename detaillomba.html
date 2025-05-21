@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CDN Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!--  Font -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              work: ['Work Sans'],
+            },
+            animation: {
+              'spin-slow': 'spin 4s linear infinite',
+              'loop-scroll': 'loop-scroll 10s linear infinite',
+            },
+            keyframes: {
+              'loop-scroll': {
+                from: { transform: 'translateX(0)' },
+                to: { transform: 'translateX(-100%)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- ----------- -->
+
+    <style type="text/tailwindcss">
+      * {
+        /* border: 1px solid red; */
+      }
+      .navbar-scrolled {
+        box-shadow: 2px 2px 30px #000000;
+      }
+      .ext-scrolled {
+        color: black;
+      }
+      .navbar {
+        transition: all 0.5s;
+      }
+    </style>
+    <!-- Title Web & Icon -->
+    <title>Lomba Ilustrasi</title>
+    <link rel="icon" href="./img/FinderLogo.svg" type="image/x-icon" />
+    <!-- Script Navbar Menu -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Script Cursor -->
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+    <!-- Script Cursor -->
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="w-full h-24 fixed bg-transparent top-0 flex z-50 justify-center">
+      <div class="flex w-full h-full bg-[#000000] bg-opacity-0 navbar mx-auto my-auto py-2 px-8 gap-3 justify-between backdrop-blur-md">
+        <div class="flex items-center gap-4 w-[220px]">
+          <a href="homepage.html#homepage" class="md:h-2/3 my-auto"><img src="img/FinderLogo.svg" alt="" class="w-full h-full" /></a>
+        </div>
+
+        <!-- Nav Asli -->
+
+        <div class="hidden md:flex gap-6 justify-center">
+          <a href="homepage.html#jadwal" style="font-family: 'Work Sans'" class="flex"><button class="text-xl text-white txt">Schedule</button></a>
+          <a href="homepage.html#about" style="font-family: 'Work Sans'" class="flex"><button class="text-xl text-white txt1">About</button></a>
+          <a href="homepage.html#program" style="font-family: 'Work Sans'" class="flex"><button class="text-xl text-white txt2">Program</button></a>
+        </div>
+
+        <!-- Tombol MarketPlace -->
+        <div class="md:flex items-center hidden gap-4 w-[220px] justify-end">
+          <a style="font-family: 'Work Sans'" href="login.html" target="_blank" class="border-[1px] hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">Login</a>
+          <a style="font-family: 'Work Sans'" href="register.html" target="_blank" class="bg-[#0D0D0D] hover:bg-opacity-25 py-2 px-6 text-white rounded-full md:text-lg">Daftar</a>
+          <img src="./img/iconakun.svg" alt="" />
+        </div>
+
+        <!-- Tombol Menu -->
+
+        <button class="bg-transparent aspect-square md:hidden text-center text-white">
+          <ion-icon onclick="onToggleMenu(this)" name="menu" class="txt text-2xl cursor-pointer my-auto"></ion-icon>
+        </button>
+      </div>
+
+      <!-- Nav Menu -->
+      <div class="nav-links flex flex-col absolute items-start bg-[#0D0D0D] bg-opacity-0 w-full p-4 shadow-2xl bottom-[120%] md:hidden text-center backdrop-blur-md">
+        <a href="homepage.html#jadwal"><button style="font-family: 'Work Sans'" class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">Schedule</button></a>
+        <a href="homepage.html#about"><button style="font-family: 'Work Sans'" class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">About</button></a>
+        <a href="homepage.html#program"><button style="font-family: 'Work Sans'" class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">Program</button></a>
+        <div class="flex items-center gap-6 w-[220px] justify-start mt-4">
+          <a style="font-family: 'Work Sans'" class="hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">Login</a>
+          <a style="font-family: 'Work Sans'" class="bg-[#0D0D0D] hover:bg-opacity-25 py-2 px-6 text-white rounded-full md:text-lg">Daftar</a>
+          <img src="./img/iconakun.svg" alt="" />
+        </div>
+      </div>
+      <!-- Akhir Navmenu -->
+    </div>
+    <!-- Navbar -->
+    <!-- Detail Lomba -->
+    <section id="" class="w-full h-full pt-32 bg-[#0D0D0D]">
+      <!-- <div class="w-[90%] mx-auto pt-72 h-72 bg-slate-400"></div> -->
+      <section class="flex gap-5 justify-between w-[90%] mx-auto my-4">
+        <h2 class="text-white text-2xl md:text-3xl font-semibold font-work text-center">Deskripsi Lomba</h2>
+        <div class="flex gap-3 px-5">
+          <div></div>
+        </div>
+      </section>
+      <p class="w-[90%] mx-auto text-white text-lg md:text-xl font-light font-work text-justify mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in perferendis repudiandae veritatis animi beatae vero officia ducimus a esse nesciunt placeat, cupiditate vitae sit sapiente illum labore iure nobis! Lorem ipsum dolor
+        sit, amet consectetur adipisicing elit. Eos dolores, amet quo et quos delectus vero, minima quasi necessitatibus vel voluptas rem tempora cum cupiditate explicabo maiores reprehenderit. Nesciunt, rem.
+      </p>
+      <!-- Peraturan -->
+      <div class="flex justify-center items-center w-[90%] bg-neutral-900 mx-auto">
+        <div style="background-image: url(./img/postig.png)" class="shrink-0 bg-cover bg-white aspect-square h-[320px] w-[320px]"></div>
+      </div>
+
+      <section class="flex gap-5 justify-between w-[90%] mx-auto my-4">
+        <h2 class="text-white text-2xl md:text-3xl font-semibold font-work text-center">Peraturan Lomba</h2>
+        <div class="flex gap-3 px-5">
+          <div></div>
+        </div>
+      </section>
+      <p class="w-[90%] mx-auto text-white text-lg md:text-xl font-light font-work text-justify">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in perferendis repudiandae veritatis animi beatae vero officia ducimus a esse nesciunt placeat, cupiditate vitae sit sapiente illum labore iure nobis! Lorem ipsum dolor
+        sit, amet consectetur adipisicing elit. Eos dolores, amet quo et quos delectus vero, minima quasi necessitatibus vel voluptas rem tempora cum cupiditate explicabo maiores reprehenderit. Nesciunt, rem.
+      </p>
+      <ul class="w-[86%] mx-auto my-4">
+        <li class="list-disc text-white text-lg md:text-xl font-semibold font-work text-justify">Lorem Ipsum Ametist</li>
+        <li class="list-disc text-white text-lg md:text-xl font-semibold font-work text-justify">Lorem Ipsum Ametist</li>
+        <li class="list-disc text-white text-lg md:text-xl font-semibold font-work text-justify">Lorem Ipsum Ametist</li>
+        <li class="list-disc text-white text-lg md:text-xl font-semibold font-work text-justify">Lorem Ipsum Ametist</li>
+      </ul>
+      <!-- Tombol -->
+      <div class="flex w-full items-center">
+        <button class="w-[90%] flex justify-center items-center mx-auto h-fit border-[1px] font-work hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full text-lg md:text-2xl my-4">
+          Download Guidebook <img src="./img/description_FILL0_wght200_GRAD0_opsz24 1.svg" alt="" />
+        </button>
+      </div>
+      <div class="flex w-full items-center">
+        <button class="w-[90%] mx-auto h-fit font-work py-2 px-6 bg-[#BA1F36] hover:bg-[#ba1f36e7] duration-300 text-white rounded-full text-lg md:text-2xl">Ikuti Lomba</button>
+      </div>
+    </section>
+    <!-- Script Toggle -->
+    <script>
+      const navLinks = document.querySelector('.nav-links');
+      function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu';
+        navLinks.classList.toggle('-bottom-52');
+      }
+    </script>
+    <!-- Script Toggle -->
+    <!-- Script Navbar -->
+    <script>
+      const navEL = document.querySelector('.navbar');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 56) {
+          navEL.classList.add('navbar-scrolled');
+        } else if (window.scrollY < 56) {
+          navEL.classList.remove('navbar-scrolled');
+        }
+      });
+    </script>
+    <!-- ------------ -->
+    <!-- ----------- -->
+  </body>
+  <!-- Cursor CDN -->
+  <script src="https://unpkg.com/kursor"></script>
+  <script>
+    new kursor({
+      type: 4,
+      removeDefaultCursor: true,
+      color: '#ffffff',
+    });
+  </script>
+  <!-- Cursor CDN -->
+</html>
