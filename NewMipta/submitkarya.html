@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="bg-black">
+    <div class=" flex flex-col justify-center items-center ">
+        <div class="pt-20 pb-10">
+        <h1 class="font-bold text-3xl text-white"> Submit Karya</h1>
+        </div>
+        <!-- Switch Button -->
+  <div class="flex bg-neutral-800 w-8/12 rounded-xl overflow-hidden pb">
+    <button type="button" class="switch-btn bg-blue-600 text-white px-4 py-2 rounded-xl w-full" data-value="digital">Karya Digital</button>
+    <button type="button" class="switch-btn bg-gray-800 text-gray-400 px-4 py-2 rounded-xl w-full" data-value="fisik">Karya Fisik</button>
+  </div>
+  <br>
+    <div class="flex justify-center items-center py-12 px-5 bg-neutral-900 rounded-3xl w-8/12 ">
+       <form action="" method="post" class="flex flex-col gap-5 border border-white w-full">
+
+  <!-- Hidden Input untuk simpan pilihan aktif -->
+  <input type="hidden" name="kategori_karya" id="kategori_karya" value="digital">
+
+               <div class="flex gap-5 justify-center border border-white">
+                   <input type="text" id="nama" name="Nama Lengkap" placeholder="Nama Lengkap" class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                   <input type="text" id="nomortelepon" name="Nomor Telepon" placeholder="Nomor Telepon" class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                </div>
+               <div class="flex gap-5 justify-center border border-white">
+                   <input type="text" id="email" name="Email" placeholder="Email" class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                   <input type="text" id="instansi" name="Instansi" placeholder="Instansi (Opsional)" class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                </div>
+               <div class="flex gap-5 justify-center border border-white">
+                   <input type="text" id="judulkarya" name="Judul Karya" placeholder="Judul Karya" class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                   <input type="text" id="sosialmedia" name="Media Sosial" placeholder="Media Sosial" class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                </div>
+                <div>
+                    <textarea type="text" id="deskripsi" name="Deskripsi Karya" placeholder="Deskripsi karya" rows="6" cols="50" class="rounded-lg px-4 py-2 text-white bg-neutral-800 w-full placeholder:text-neutral-700 placeholder:text-center placeholder:pt-14"></textarea>
+                </div>
+                    <div>
+                        <input type="text" id="linkkarya" name="Link Karya" placeholder="Link Google Drive (Berisi surat Pernyataan Orisinalitas, Karya, dan video proses pembuatan )" class="rounded-lg pl-4 py-2 text-white bg-neutral-800 w-full placeholder:text-neutral-700">
+                    </div>
+                    <div class="flex justify-center">
+                        <button type="submit"     class="bg-emerald-600 hover:bg-emerald-700 text-black px-20 py-2 rounded-xl shadow">Submit</button>
+                        
+                    </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
