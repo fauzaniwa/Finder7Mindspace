@@ -326,7 +326,7 @@ mysqli_close($koneksi);
       <img
         src="./img/hero/4.png"
         alt="Ilustrasi karakter dekoratif pojok kanan bawah"
-        class="absolute bottom-0 right-0 w-[clamp(20rem,25vw,50rem)] translate-x-[35%] sm:translate-x-[25%] sm:translate-y-[-5%] animate-pulse"
+        class="absolute bottom-0 right-0 w-[clamp(20rem,30vw,40rem)] translate-x-[35%] sm:translate-x-[25%] sm:translate-y-[0%] animate-pulse"
       />
 
       <!-- Central Content -->
@@ -335,7 +335,7 @@ mysqli_close($koneksi);
           Coming Soon<br />Finder 7 Mindspace
         </h1>
         <p class="text-base sm:text-xl text-gray-300">
-          Lorem ipsum dolor sit amet
+          think the unthinkable
         </p>
         <div class="flex flex-col gap-4 items-center">
           <a
