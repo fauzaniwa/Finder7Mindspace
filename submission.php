@@ -2,24 +2,133 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
-    <style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        work: ['Work Sans'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 4s linear infinite',
+                        'loop-scroll': 'loop-scroll 10s linear infinite',
+                    },
+                    keyframes: {
+                        'loop-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
+
+
+        .navbar-scrolled {
+        box-shadow: 2px 2px 30px #000000;
+      }
+      .ext-scrolled {
+        color: black;
+      }
+      .navbar {
+        transition: all 0.5s;
+      }
+      .scroller {
+        max-width: 600px;
+      }
+
+      .scroller__inner {
+        padding-block: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+      }
+
+      .scroller[data-animated='true'] {
+        overflow: hidden;
+        -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+      }
+
+      .scroller[data-animated='true'] .scroller__inner {
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+      }
+
+      .scroller[data-direction='right'] {
+        --_animation-direction: reverse;
+      }
+
+      .scroller[data-direction='left'] {
+        --_animation-direction: forwards;
+      }
+
+      .scroller[data-speed='fast'] {
+        --_animation-duration: 20s;
+      }
+
+      .scroller[data-speed='slow'] {
+        --_animation-duration: 60s;
+      }
+
+      @keyframes scroll {
+        to {
+          transform: translate(calc(-50% - 0.5rem));
+        }
+      }
+
+      /* for testing purposed to ensure the animation lined up correctly */
+      .test {
+        background: red !important;
+      }
     </style>
+    <title>Finder - Lomba Ilustrasi</title>
+    <link rel="icon" href="./img/FinderLogo.svg" type="image/x-icon" />
+    <!-- Script Navbar Menu -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Script Cursor -->
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+    <!-- Script Cursor -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="bg-neutral-950">
+    <?php
+    require '_navbar.php';
+    ?>
     <div
         class="w-2/3 h-3/4 blur-3xl absolute -z-10 rounded-full bg-[radial-gradient(circle,_#515151_0%,_rgba(244,114,182,0)_70%)] top-px left-1/2 -translate-x-1/2 -translate-y-1/2">
     </div>
 
     <!-- Hero Section -->
-    <section class="hero aspect-video  flex items-center justify-center w-10/12 mx-auto">
+    <section class="hero relative min-h-screen px-4  flex items-center justify-center w-full mx-auto border border-white overflow-hidden ">
+         <!-- Kiri Atas -->
+    <img src="./img/hero/1.png" alt="" 
+         class="hidden sm:block absolute top-0 left-0 -translate-x-2/5 translate-y-1/3 w-1/4 z-10">
+
+    <!-- Kanan Atas -->
+    <img src="./img/hero/3.png" alt="" 
+         class="hidden sm:block absolute top-0 right-0 translate-x-1/2 translate-y-1/4 w-1/4 z-10">
+
+    <!-- Kiri Bawah -->
+    <img src="./img/hero/2.png" alt="" 
+         class="hidden sm:block absolute bottom-0 left-0 -translate-x-2/5 -translate-y-1/8 w-1/4 z-10">
+
+    <!-- Kanan Bawah -->
+    <img src="./img/hero/4.png" alt="" 
+         class="hidden sm:block absolute bottom-0 right-0 w-32 md:w-48 lg:w-1/4 translate-x-1/3 -translate-y-1/8 z-10">
+
         <div class="justify-center flex flex-col items-center p-10 max-w-xl mx-auto py-72 ">
             <div class="countdown flex justify-center gap-2 items-center mb-4">
                 <div class="flex flex-col items-center justify-center">
@@ -102,7 +211,7 @@
     </div> -->
         <section class="timeline flex flex-col justify-center w-10/12 mx-auto ">
             <h1 class="text-3xl md:text-6xl font-bold text-white text-center mb-16 md:mb-32">Timeline</h1>
-            <img src="/img/Submission/Timeline 2.png" alt="">
+            <img src="./img/Submission/Timeline 2.png" alt="">
         </section>
     </div>
     <br><br><br><br><br><br><br><br>
@@ -114,7 +223,7 @@
             <div class="flex flex-col w-full md:w-1/4 p-10">
                 <div class="flex flex-col">
                     <h1 class=" text-center font-bold text-2xl md:text-3xl pb-10">Juara 1</h1>
-                    <img src="/img/Submission/juara 1-mix 1.png" alt="" class="w-72 h-auto mx-auto">
+                    <img src="./img/Submission/juara 1-mix 1.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col">
                     <h1 class="text-center italic font-semibold text-2xl pb-4"> Rp. 1.750.000,-</h1>
@@ -125,7 +234,7 @@
             <div class="flex flex-row md:flex-col w-full md:w-1/4 p-10 items-center gap-4 md:gap-0">
                 <div class="flex flex-col w-1/2 md:w-full">
                     <h1 class="hidden md:block text-center font-bold text-3xl pb-10">Juara 2</h1>
-                    <img src="/img/Submission/juara 2-mix 1.png" alt="" class="w-72 h-auto mx-auto">
+                    <img src="./img/Submission/juara 2-mix 1.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col w-1/2 md:w-full ">
                     <h1 class="block md:hidden text-left font-bold text-2xl pb-3">Juara 2</h1>
@@ -139,7 +248,7 @@
             <div class="flex flex-row md:flex-col w-full md:w-1/4 p-10 items-center gap-4 md:gap-0">
                 <div class="flex flex-col w-1/2 md:w-full">
                     <h1 class="hidden md:block text-center font-bold text-3xl pb-10">Juara 3</h1>
-                    <img src="/img/Submission/juara 3-mix 1.png" alt="" class="w-72 h-auto mx-auto">
+                    <img src="./img/Submission/juara 3-mix 1.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col w-1/2 md:w-full ">
                     <h1 class="block md:hidden text-left font-bold text-2xl pb-3">Juara 3</h1>
@@ -153,7 +262,7 @@
             <div class="flex flex-row md:flex-col w-full md:w-1/4 p-10 items-center gap-4 md:gap-0">
                 <div class="flex flex-col w-1/2 md:w-full">
                     <h1 class="hidden md:block text-center font-bold text-3xl pb-10">Juara Favorit</h1>
-                    <img src="/img/Submission/harapan 1.png" alt="" class="w-72 h-auto mx-auto">
+                    <img src="./img/Submission/harapan 1.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col w-1/2 md:w-full ">
                     <h1 class="block md:hidden text-left font-bold text-2xl pb-3">Juara Favorit</h1>
@@ -432,14 +541,94 @@
 
     <br><br><br><br><br><br>
     <div class="flex justify-center">
-        <a href="/NewMipta/submitkarya.html">
+        <a href="submitkarya.php">
             <button
                 class="submit-btn bg-emerald-400 hover:bg-emerald-600 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl">Submit
                 karya </button>
         </a>
     </div>
     <br><br><br><br><br><br>
+    
+<!-- Script Toggle -->
+    <script>
+        const navLinks = document.querySelector('.nav-links');
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            navLinks.classList.toggle('-bottom-52');
+        }
+    </script>
+
+    <!-- Script Toggle -->
+    <!-- Script Navbar -->
+    <script>
+        const navEL = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 56) {
+                navEL.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 56) {
+                navEL.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+    <script>
+        const scrollers = document.querySelectorAll('.scroller');
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                scroller.setAttribute('data-animated', true);
+                const scrollerInner = scroller.querySelector('.scroller__inner');
+                const scrollerContent = Array.from(scrollerInner.children);
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute('aria-hidden', true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+    </script>
+    <script src="system.js"></script>
+    <!-- Tambahkan link Font Awesome di head -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Corosuel Animasi Js -->
+    <script>
+        const scrollers = document.querySelectorAll('.scroller');
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                scroller.setAttribute('data-animated', true);
+                const scrollerInner = scroller.querySelector('.scroller__inner');
+                const scrollerContent = Array.from(scrollerInner.children);
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute('aria-hidden', true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+    </script>
+
+ <?php
+    require '_footer.php';
+    ?>
 </body>
+<script src="https://unpkg.com/kursor"></script>
+<script>
+    new kursor({
+        type: 4,
+        removeDefaultCursor: true,
+        color: '#ffffff',
+    });
+</script>
 
 <script>
 

@@ -845,7 +845,7 @@ mysqli_close($koneksi);
         We are delighted to announce an international illustration competition hosted by Finder 6 Pusaka in partnership
         with Mizan, we extend a warm invitation to all of you to participate!
       </p>
-      <a href="detaillomba.php"><button style="font-family: 'Work Sans'"
+      <a href="submission.php"><button style="font-family: 'Work Sans'"
           class="border-[1px] hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">Lihat
           Detail</button></a>
     </div>
