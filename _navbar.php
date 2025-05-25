@@ -3,7 +3,7 @@
         <div
             class="flex w-full h-full bg-[#000000] bg-opacity-0 navbar mx-auto my-auto py-2 pl-4 md:px-8 gap-3 justify-between backdrop-blur-md">
             <div class="flex items-center gap-4 w-[220px]">
-                <a href="homepage.php" class="md:h-2/3 my-auto"><img src="img/(1) Finder 6 Logo Vertical Full White.png" alt=""
+                <a href="homepage.php" class="md:h-2/3 my-auto"><img src="img/Finder 7 Logopack_Lockup Full White small.png" alt=""
                         class="w-[33%] h-[33%] md:w-full md:h-full" /></a>
             </div>
 
@@ -11,13 +11,13 @@
 
             <div class="hidden md:flex gap-6 justify-center">
                 <a href="homepage.php#about" style="font-family: 'Work Sans'" class="flex"><button
-                        class="text-sm lg:text-xl text-white txt1">Tentang Kami</button></a>
+                        class="text-sm lg:text-xl text-white txt1">About</button></a>
                 <a href="homepage.php#program" style="font-family: 'Work Sans'" class="flex"><button
-                        class="text-sm lg:text-xl text-white txt2">Program</button></a>
+                        class="text-sm lg:text-xl text-white txt2">Pameran</button></a>
                 <a href="homepage.php#jadwal" style="font-family: 'Work Sans'" class="flex"><button
                         class="text-sm lg:text-xl text-white txt">Jadwal</button></a>
-                <a href="homepage.php#karya" style="font-family: 'Work Sans'" class="flex"><button
-                        class="text-sm lg:text-xl text-white txt">Pameran</button></a>
+                <a href="submission.php" style="font-family: 'Work Sans'" class="flex"><button
+                        class="text-sm lg:text-xl text-white txt">Lomba</button></a>
             </div>
 
             <!-- Tombol Login -->
