@@ -355,47 +355,55 @@ mysqli_close($koneksi);
     </section>
 
     <section id="finderdesc" class="py-16">
-      <div class="container mx-auto px-6">
-        <div
-          class="w-full max-w-[1264px] mx-auto h-auto md:h-[516px] relative rounded-3xl overflow-hidden p-8 md:p-12"
-        >
-          <div
-            class="relative z-10 flex flex-col items-center justify-center h-full"
-          >
-            <div
-              class="w-full md:w-96 text-center text-white text-4xl md:text-5xl font-semibold font-['Work_Sans'] leading-[56px] md:leading-[64px] mb-8 md:mb-12"
-            >
-              Finder
-            </div>
-            <div
-              class="inline-flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 mb-8 md:mb-12"
-            >
-              <img
-                class="w-60 md:w-72 h-auto md:h-24 object-contain"
-                src="img/Finder 7 Logo Title Tagline Full White.png"
-                alt="Logo 1"
-              />
-              <img
-                class="w-44 md:w-52 h-auto md:h-24 object-contain"
-                src="img/DKVUPI WHITE 1.png"
-                alt="Logo 2"
-              />
-            </div>
-            <div
-              class="w-full max-w-[824px] text-center text-white text-base md:text-lg font-normal font-['Work_Sans'] leading-7"
-            >
-              Finder adalah sebuah annual event tahunan yang diadakan oleh prodi
-              DKV UPI sebagai bentuk eksistensi diri terhadap dunia. Dalam event
-              Finder terdapat beberapa rangkaian acara yang memiliki beberapa
-              tujuan seperti memberikan wawasan mengenai desain serta hal-hal
-              umum lainnya. Ada pula seperti perlombaan untuk menjadi wadah
-              kreatifitas. Finder tiap munculnya selalu membawa tema untuk
-              dijadikan sebagai dasar pembawaan.
-            </div>
-          </div>
+  <div class="container mx-auto px-6">
+    <div class="w-full max-w-[1264px] mx-auto h-auto md:h-[516px] relative rounded-3xl overflow-hidden p-8 md:p-12">
+      <!-- Konten yang sudah ada -->
+      <div class="relative z-10 flex flex-col items-center justify-center h-full">
+        <div class="w-full md:w-96 text-center text-white text-4xl md:text-5xl font-semibold font-['Work_Sans'] leading-[56px] md:leading-[64px] mb-8 md:mb-12">
+          Finder
+        </div>
+        <div class="inline-flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 mb-8 md:mb-12">
+          <img
+            class="w-60 md:w-72 h-auto md:h-24 object-contain"
+            src="img/Finder 7 Logo Title Tagline Full White.png"
+            alt="Logo 1"
+          />
+          <img
+            class="w-44 md:w-52 h-auto md:h-24 object-contain"
+            src="img/DKVUPI WHITE 1.png"
+            alt="Logo 2"
+          />
+        </div>
+        <div class="w-full max-w-[824px] text-center text-white text-base md:text-lg font-normal font-['Work_Sans'] leading-7">
+          Finder adalah sebuah annual event tahunan yang diadakan oleh prodi
+          DKV UPI sebagai bentuk eksistensi diri terhadap dunia. Dalam event
+          Finder terdapat beberapa rangkaian acara yang memiliki beberapa
+          tujuan seperti memberikan wawasan mengenai desain serta hal-hal
+          umum lainnya. Ada pula seperti perlombaan untuk menjadi wadah
+          kreatifitas. Finder tiap munculnya selalu membawa tema untuk
+          dijadikan sebagai dasar pembawaan.
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+  <section class="py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <!-- Video wrapper: padding-bottom 56.25% = 16:9 -->
+    <div class="relative w-full pb-[56.25%] overflow-hidden rounded-xl shadow-lg">
+      <iframe
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/AEZUoTgOOII?si=tN2UDfsSrdtqzPar"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+</section>
     <div
       class="w-[1046px] h-0 outline outline-1 outline-offset-[-0.25px] outline-zinc-600 justify-center items-center mx-auto mb-10"
     ></div>

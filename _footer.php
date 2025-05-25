@@ -19,7 +19,7 @@
     <!-- Sosial & Copy -->
     <div class="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
       <!-- Copyright -->
-      <p class="text-xs">&copy; Finder 7 Mindspace 2025</p>
+      <p class="text-xs">&copy; Finder 7 Multimedia</p>
 
       <!-- Icons -->
       <div class="flex space-x-4">
