@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <script>
         tailwind.config = {
             theme: {
@@ -103,19 +107,19 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-neutral-950">
+<body class="bg-black">
     <?php
-    require '_navbar.php';
+    require '_navbar.php'
     ?>
     <div
         class="w-2/3 h-3/4 blur-3xl absolute -z-10 rounded-full bg-[radial-gradient(circle,_#515151_0%,_rgba(244,114,182,0)_70%)] top-px left-1/2 -translate-x-1/2 -translate-y-1/2">
     </div>
 
     <!-- Hero Section -->
-    <section class="hero relative min-h-screen px-4  flex items-center justify-center w-full mx-auto border border-white overflow-hidden ">
+    <section class="hero relative min-h-screen px-4  flex items-center justify-center w-full mx-auto overflow-hidden ">
          <!-- Kiri Atas -->
     <img src="./img/hero/1.png" alt="" 
-         class="hidden sm:block absolute top-0 left-0 -translate-x-2/5 translate-y-1/3 w-1/4 z-10">
+         class="hidden sm:block absolute top-0 left-0 -translate-x-1/3 translate-y-1/3 w-1/4 z-10">
 
     <!-- Kanan Atas -->
     <img src="./img/hero/3.png" alt="" 
@@ -123,7 +127,7 @@
 
     <!-- Kiri Bawah -->
     <img src="./img/hero/2.png" alt="" 
-         class="hidden sm:block absolute bottom-0 left-0 -translate-x-2/5 -translate-y-1/8 w-1/4 z-10">
+         class="hidden sm:block absolute bottom-0 left-0 -translate-x-1/3 -translate-y-1/8 w-1/4 z-10">
 
     <!-- Kanan Bawah -->
     <img src="./img/hero/4.png" alt="" 
@@ -174,15 +178,22 @@
                 ketentuannya dulu ya!</h3>
             <a href="#deskripsi">
                 <button
-                    class="submit-btn bg-emerald-400 hover:bg-emerald-600 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl">See
+                    class="submit-btn  bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white  ">See
                     More</button>
             </a>
         </div>
     </section>
 
     <!-- Deskripsi Section -->
-    <section id="deskripsi" class="deskripsi py-32 w-10/12 mx-auto">
-        <div class="flex flex-col justify-center items-center text-center text-white  mx-auto max-w-5xl">
+    <section id="deskripsi" class="deskripsi relative py-[32rem] mx-auto overflow-hidden w-full">
+        Kanan Atas
+    <img src="./img/Submission/Supergraphic2.png" alt="" 
+         class="hidden sm:block absolute top-0 right-0 translate-x-1/2 translate-y-1/4 w-1/3 z-10">
+
+    Kiri Bawah
+    <img src="./img/Submission/Supergraphic1.png" alt="" 
+         class="hidden sm:block absolute bottom-0 left-0 -translate-x-1/2 -translate-y-1/4 w-1/3 z-10">
+        <div class="flex flex-col justify-center items-center text-center text-white  mx-auto max-w-5xl px-12">
             <h1 class="text-3xl md:text-5xl font-bold w-2/3 md:w-auto ">Sekilas Tentang FINDER 7</h1>
             <br>
             <p class="max-w-2xl mx-auto italic text-sm md:text-md">“Di tengah kemajuan kecerdasan buatan, satu hal yang
@@ -204,21 +215,22 @@
         </div>
     </section>
     <br><br><br><br><br><br><br><br>
-    <!-- Tomeline Section -->
+    <!-- Timeline Section -->
     <div class="flex justify-center items-center">
         <!-- <div
         class=" absolute flex pointer-events-none w-full h-20 bg-gradient-to-r from-transparent via-emerald-400 to-transparent -z-10">
     </div> -->
-        <section class="timeline flex flex-col justify-center w-10/12 mx-auto ">
+        <section class="timeline flex flex-col justify-center w-full mx-auto ">
             <h1 class="text-3xl md:text-6xl font-bold text-white text-center mb-16 md:mb-32">Timeline</h1>
-            <img src="./img/Submission/Timeline 2.png" alt="">
+            <img src="./img/Submission/Timeline 2.png" alt="" class="hidden sm:block w-10/12 justify-center mx-auto">
+            <img src="./img/Submission/timeline-mobile.png" alt="" class="block sm:hidden w-full">
         </section>
     </div>
     <br><br><br><br><br><br><br><br>
 
     <!-- Prize Section -->
     <section class="prize flex flex-col justify-center">
-        <h1 class="text-3xl md:text-6xl font-bold text-white text-center mb-16 md:mb-32">Prizes</h1>
+            <h1 class="text-3xl md:text-6xl font-bold text-white text-center mb-16 md:mb-32">Prizes</h1>
         <div class="flex-col flex md:flex-row bg-neutral-800 w-full text-white">
             <div class="flex flex-col w-full md:w-1/4 p-10">
                 <div class="flex flex-col">
@@ -291,14 +303,14 @@
             class="pointer-events-none absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-neutral-950 to-transparent z-10">
         </div>
         <section
-            class="umum flex overflow-x-auto snap-x snap-mandatory gap-5 md:gap-20 px-14 md:px-32 scrollbar-hide scroll-smooth ">
+            class="umum flex overflow-x-auto snap-x snap-mandatory gap-5 md:gap-20 px-7 md:px-24 scrollbar-hide scroll-smooth ">
             <div id="syarat"
-                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-16 md:p-40 py-12 md:py-32 bg-neutral-800 text-white ">
+                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-10 md:p-24 py-12 md:py-32 bg-neutral-800 text-white ">
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Syarat dan Ketentuan</h1>
 
 
                 <ol
-                    class="list-decimal list-outside space-y-1 md:space-y-4 text-sm md:text-xl text-justify md:text-left">
+                    class="list-decimal list-outside pl-4 space-y-1 md:space-y-4 text-sm md:text-xl text-left md:text-left">
                     <li>Lomba bersifat individu. Karya hasil kolaborasi atau kelompok dianggap tidak memenuhi syarat.
                     </li>
                     <li>Peserta hanya boleh mengikuti satu mata lomba.</li>
@@ -316,7 +328,7 @@
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Hak Cipta</h1>
 
                 <ol
-                    class="list-decimal list-outside space-y-1 md:space-y-4 text-sm md:text-xl text-justify md:text-leftl">
+                    class="list-decimal list-outside pl-4 space-y-1 md:space-y-4 text-sm md:text-xl text-left md:text-leftl">
                     <li>Hak cipta karya tetap milik peserta.</li>
                     <li>Namun, panitia berhak menggunakan karya untuk keperluan publikasi acara dengan tetap
                         mencantumkan kredit pada pembuat.</li>
@@ -324,11 +336,11 @@
             </div>
 
             <div id="teknis"
-                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-16 md:p-40 py-12 md:py-32 bg-neutral-800 text-white ">
+                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-10 md:p-24 py-12 md:py-32 bg-neutral-800 text-white ">
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Teknis Pelaksanaan</h1>
 
                 <ol
-                    class="list-decimal list-outside space-y-1 md:space-y-4 text-sm md:text-xl text-justify md:text-left">
+                    class="list-decimal list-outside pl-4 space-y-1 md:space-y-4 text-sm md:text-xl text-left md:text-left">
                     <li>Peserta wajib mengunduh, mengisi, menandatangani dan mengunggah kembali Surat Pernyataan
                         Orisinalitas Karya.
                     </li>
@@ -347,7 +359,7 @@
                     <li>Pemenang akan diumumkan pada tanggal 10 Juli 2025 melalui akun Instagram resmi FINDER 7
                         (@finder_dkv) dan dihubungi langsung melalui nomor telepon atau e-mail.</li>
                     <li>3 (tiga) karya terbaik dan 1 (satu) karya favorit akan mendapatkan hadiah berupa;
-                        <ol class="list-[lower-alpha] list-outside space-y-4 pl-4 pt-4">
+                        <ol class="list-[lower-alpha] list-outside pl-6 space-y-4 pt-4">
                             <li>Juara 1 : Rp1.750.000 + e-sertifikat + karya dipamerkan</li>
                             <li>Juara 2 : Rp1.250.000 + e-sertifikat + karya dipamerkan</li>
                             <li>Juara 3 : Rp750.000 + e-sertifikat + karya dipamerkan</li>
@@ -377,18 +389,18 @@
             class="pointer-events-none absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-neutral-950 to-transparent z-10">
         </div>
         <section
-            class="khusus flex overflow-x-auto snap-x snap-mandatory gap-5 md:gap-20 px-14 md:px-32 scrollbar-hide scroll-smooth ">
+            class="khusus flex overflow-x-auto snap-x snap-mandatory gap-5 md:gap-20 px-7 md:px-24 scrollbar-hide scroll-smooth ">
             <div id="desainkarakter"
-                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-16 md:p-40 py-12 md:py-32 bg-neutral-800 text-white ">
+                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-10 md:p-24 py-12 md:py-32 bg-neutral-800 text-white ">
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Tema</h1>
-                <h2 class="text-base md:text-xl text-justify md:text-left font-semibold pb-3 italic">EMOTIONAL CHARACTER
+                <h2 class="text-base md:text-xl text-left md:text-left font-semibold pb-3 italic">EMOTIONAL CHARACTER
                 </h2>
-                <p class="text-sm md:text-xl text-justify md:text-left"> Peserta ditantang untuk menciptakan sosok
+                <p class="text-sm md:text-xl text-left md:text-left"> Peserta ditantang untuk menciptakan sosok
                     karakter orisinil yang merepresentasikan suatu emosi atau rasa yang ada dalam diri manusia.</p>
                 <br><br>
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Ketentuan</h1>
                 <ol
-                    class="list-decimal list-outside space-y-1 md:space-y-4 text-sm md:text-xl text-justify md:text-left">
+                    class="list-decimal list-outside pl-4 space-y-1 md:space-y-4 text-sm md:text-xl text-left md:text-left">
                     <li>Karya berupa desain karakter orisinal.
                     </li>
                     <li>Media desain digital.</li>
@@ -408,7 +420,7 @@
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Kriteria Penilaian</h1>
 
                 <ol
-                    class="list-decimal list-outside space-y-1 md:space-y-4 text-sm md:text-xl text-justify md:text-leftl">
+                    class="list-decimal list-outside pl-4 space-y-1 md:space-y-4 text-sm md:text-xl text-left md:text-leftl">
                     <li>Orisinalitas dan kreativitas (30%)</li>
                     <li>Kesesuaian dengan tema (25%)</li>
                     <li>Kekuatan naratif atau latar belakang karakter (20%)</li>
@@ -417,15 +429,15 @@
             </div>
 
             <div id="poster"
-                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-16 md:p-40 py-12 md:py-32 bg-neutral-800 text-white ">
+                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-10 md:p-24 py-12 md:py-32 bg-neutral-800 text-white ">
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Tema</h1>
-                <h2 class="text-base md:text-xl text-justify md:text-left font-semibold pb-3 italic">DEEP STATE OF MIND
+                <h2 class="text-base md:text-xl text-left md:text-left font-semibold pb-3 italic">DEEP STATE OF MIND
                 </h2>
-                <p class="text-sm md:text-xl text-justify md:text-left"> Peserta ditantang untuk menciptakan sebuah desain poster ilustrasi yang menggambarkan tentang pikiran terdalam yang ada dalam diri manusia</p>
+                <p class="text-sm md:text-xl text-left md:text-left"> Peserta ditantang untuk menciptakan sebuah desain poster ilustrasi yang menggambarkan tentang pikiran terdalam yang ada dalam diri manusia</p>
                 <br><br>
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Ketentuan</h1>
                 <ol
-                    class="list-decimal list-outside space-y-1 md:space-y-4 text-sm md:text-xl text-justify md:text-left">
+                    class="list-decimal list-outside pl-4 space-y-1 md:space-y-4 text-sm md:text-xl text-left md:text-left">
                     <li>Karya berupa poster ilustrasi orisinal.
                     </li>
                     <li>Media desain digital.</li>
@@ -444,7 +456,7 @@
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Kriteria Penilaian</h1>
 
                 <ol
-                    class="list-decimal list-outside space-y-1 md:space-y-4 text-sm md:text-xl text-justify md:text-leftl">
+                    class="list-decimal list-outside pl-4 space-y-1 md:space-y-4 text-sm md:text-xl text-left md:text-leftl">
                     <li>Orisinalitas dan kreativitas (30%)</li>
                     <li>Kesesuaian dengan tema (30%)</li>
                     <li>Kekuatan visual dan teknis desain (25%)</li>
@@ -469,9 +481,9 @@
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
                     <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Gina Fajri Aulia</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 1</h2>
                 <div class="max-w-full">
-                    <p class="text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
+                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit... </p>
                 </div>
             </div>
@@ -480,9 +492,9 @@
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
                     <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Gina Fajri Aulia</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 2</h2>
                 <div class="max-w-full">
-                    <p class="text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
+                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit... </p>
                 </div>
             </div>
@@ -491,9 +503,9 @@
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
                     <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Gina Fajri Aulia</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 3</h2>
                 <div class="max-w-full">
-                    <p class="text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
+                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit... </p>
                 </div>
             </div>
@@ -508,9 +520,9 @@
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
                     <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Gina Fajri Aulia</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 1</h2>
                 <div class="max-w-full">
-                    <p class="text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
+                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit... </p>
                 </div>
             </div>
@@ -519,9 +531,9 @@
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
                     <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Gina Fajri Aulia</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 2</h2>
                 <div class="max-w-full">
-                    <p class="text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
+                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit... </p>
                 </div>
             </div>
@@ -530,9 +542,9 @@
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
                     <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Gina Fajri Aulia</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 3</h2>
                 <div class="max-w-full">
-                    <p class="text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
+                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit... </p>
                 </div>
             </div>
@@ -543,7 +555,7 @@
     <div class="flex justify-center">
         <a href="submitkarya.php">
             <button
-                class="submit-btn bg-emerald-400 hover:bg-emerald-600 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl">Submit
+                class="submit-btn bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white">Submit
                 karya </button>
         </a>
     </div>
@@ -631,20 +643,12 @@
 </script>
 
 <script>
+    // Hapus localStorage lama (kalau pernah pakai sebelumnya)
+    localStorage.removeItem('countdownEnd');
 
-    // Total durasi countdown dalam detik (2 hari, 5 jam, 9 menit)
-    const initialDuration = (10 * 24 * 60 * 60) + (5 * 60 * 60) + (9 * 60);
-
-    // Coba ambil waktu target dari localStorage
-    let endTime = localStorage.getItem('countdownEnd');
-
-    if (!endTime) {
-        // Jika belum ada, set waktu target berdasarkan sekarang + durasi awal
-        endTime = Date.now() + (initialDuration * 1000);
-        localStorage.setItem('countdownEnd', endTime);
-    } else {
-        endTime = parseInt(endTime);
-    }
+    // Target: 30 Mei 2025 pukul 23:59 WIB → 16:59 UTC
+    const targetDate = new Date(Date.UTC(2025, 4, 30, 16, 59, 0));
+    const endTime = targetDate.getTime();
 
     const digits = document.querySelectorAll('.digit');
 
@@ -669,13 +673,14 @@
 
         if (remaining <= 0) {
             clearInterval(timer);
-            // Tambahkan aksi setelah countdown selesai di sini
             console.log("Waktu habis!");
         }
     }
 
     const timer = setInterval(updateCountdown, 1000);
-    updateCountdown(); // render awal
+    updateCountdown();
+
+
 
     // Fungsi reusable untuk setup observer dan tab scroll
     function setupSectionNavigation({ sectionClass, navClass }) {
