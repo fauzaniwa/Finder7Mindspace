@@ -319,14 +319,14 @@ mysqli_close($koneksi);
       <img
         src="./img/hero/2.png"
         alt="Ilustrasi karakter dekoratif pojok kiri bawah"
-        class="absolute bottom-0 left-0 w-[clamp(20rem,25vw,40rem)] translate-x-[-35%] sm:translate-x-[-30%] sm:translate-y-[-5%] animate-pulse"
+        class="absolute bottom-0 left-0 w-[clamp(20rem,25vw,40rem)] translate-x-[-35%] sm:translate-x-[-30%] sm:translate-y-[20%] animate-pulse"
       />
 
       <!-- Bottom Right -->
       <img
         src="./img/hero/4.png"
         alt="Ilustrasi karakter dekoratif pojok kanan bawah"
-        class="absolute bottom-0 right-0 w-[clamp(20rem,30vw,40rem)] translate-x-[35%] sm:translate-x-[25%] sm:translate-y-[0%] animate-pulse"
+        class="absolute bottom-0 right-0 w-[clamp(20rem,30vw,40rem)] translate-x-[35%] sm:translate-x-[25%] sm:translate-y-[25%] animate-pulse"
       />
 
       <!-- Central Content -->
@@ -340,13 +340,13 @@ mysqli_close($koneksi);
         <div class="flex flex-col gap-4 items-center">
           <a
             href="https://www.instagram.com/finder_dkv/"
-            class="w-48 sm:w-64 h-12 sm:h-16 flex items-center justify-center bg-white text-neutral-900 text-lg sm:text-xl font-medium rounded-xl sm:rounded-[20px] shadow-md hover:scale-105 transition-transform duration-300"
+            class="w-48 sm:w-64 h-12 sm:h-16 flex items-center justify-center bg-[#008C62] text-white text-lg sm:text-xl font-medium rounded-xl sm:rounded-[20px] shadow-md hover:scale-105 transition-transform duration-300"
           >
             Instagram
           </a>
           <a
             href="#finderdesc"
-            class="scroll-button w-48 sm:w-64 h-12 sm:h-16 flex items-center justify-center bg-neutral-700 text-white text-lg sm:text-xl font-medium rounded-xl sm:rounded-[20px] shadow-md hover:scale-105 transition-transform duration-300"
+            class="scroll-button w-48 sm:w-64 h-12 sm:h-16 flex items-center justify-center bg-neutral-500 text-black text-lg sm:text-xl font-medium rounded-xl sm:rounded-[20px] shadow-md hover:scale-105 transition-transform duration-300"
           >
             See More
           </a>
@@ -354,27 +354,66 @@ mysqli_close($koneksi);
       </div>
     </section>
 
-    <section id="finderdesc" class="py-16">
+   <section id="finderdesc" class="relative pt-16 pb-16 overflow-hidden">
+  <!-- Dekorasi kiri -->
+  <img
+    src="./img/supergrafis/SG L.png"
+    alt="Ilustrasi karakter dekoratif pojok kiri bawah"
+    class=" absolute
+         top-0 sm:top-auto sm:bottom-0   /* ① posisi */
+         left-0
+         w-[clamp(20rem,25vw,40rem)]
+         translate-x-[-60%] sm:translate-x-[-30%]
+         translate-y-[30%] sm:translate-y-[-50%] 
+           z-0 sm:opacity-100 opacity-35"
+  />
+
+  <!-- Dekorasi kanan-->
+  <img
+    src="./img/supergrafis/SG R.png"
+    alt="Ilustrasi karakter dekoratif pojok kanan bawah"
+    class="absolute
+         bottom-0   
+         right-0
+         w-[clamp(20rem,25vw,40rem)]
+         translate-x-[60%] sm:translate-x-[30%]    
+         translate-y-[-70%] sm:translate-y-[-50%]   
+         z-0 sm:opacity-100 opacity-35"
+  />
+
   <div class="container mx-auto px-6">
-    <div class="w-full max-w-[1264px] mx-auto h-auto md:h-[516px] relative rounded-3xl overflow-hidden p-8 md:p-12">
-      <!-- Konten yang sudah ada -->
+    <div
+      class="w-full max-w-[1264px] mx-auto
+             h-auto md:h-[516px]
+             relative rounded-3xl p-8 md:p-12"
+    >
+      <!-- Konten utama Finder -->
       <div class="relative z-10 flex flex-col items-center justify-center h-full">
-        <div class="w-full md:w-96 text-center text-white text-4xl md:text-5xl font-semibold font-['Work_Sans'] leading-[56px] md:leading-[64px] mb-8 md:mb-12">
+        <h2
+          class="w-full md:w-96 text-center text-white text-4xl md:text-5xl
+                 font-semibold font-['Work_Sans'] leading-[56px] md:leading-[64px]
+                 mb-8 md:mb-12"
+        >
           Finder
-        </div>
+        </h2>
+
         <div class="inline-flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 mb-8 md:mb-12">
           <img
             class="w-60 md:w-72 h-auto md:h-24 object-contain"
             src="img/Finder 7 Logo Title Tagline Full White.png"
-            alt="Logo 1"
+            alt="Logo Finder 7 Mindspace"
           />
           <img
             class="w-44 md:w-52 h-auto md:h-24 object-contain"
             src="img/DKVUPI WHITE 1.png"
-            alt="Logo 2"
+            alt="Logo DKV UPI"
           />
         </div>
-        <div class="w-full max-w-[824px] text-center text-white text-base md:text-lg font-normal font-['Work_Sans'] leading-7">
+
+        <p
+          class="w-full max-w-[824px] text-center text-white text-base md:text-lg
+                 font-normal font-['Work_Sans'] leading-7"
+        >
           Finder adalah sebuah annual event tahunan yang diadakan oleh prodi
           DKV UPI sebagai bentuk eksistensi diri terhadap dunia. Dalam event
           Finder terdapat beberapa rangkaian acara yang memiliki beberapa
@@ -382,26 +421,27 @@ mysqli_close($koneksi);
           umum lainnya. Ada pula seperti perlombaan untuk menjadi wadah
           kreatifitas. Finder tiap munculnya selalu membawa tema untuk
           dijadikan sebagai dasar pembawaan.
-        </div>
+        </p>
+      </div>
+    </div>
+
+    <!-- Video YouTube -->
+    <div class="mt-12 max-w-4xl mx-auto">
+      <div class="relative w-full pb-[56.25%] overflow-hidden rounded-xl shadow-lg">
+        <iframe
+          class="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube.com/embed/AEZUoTgOOII?si=tN2UDfsSrdtqzPar"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
       </div>
     </div>
   </div>
-  <section class="py-16 px-6">
-  <div class="max-w-4xl mx-auto">
-    <!-- Video wrapper: padding-bottom 56.25% = 16:9 -->
-    <div class="relative w-full pb-[56.25%] overflow-hidden rounded-xl shadow-lg">
-      <iframe
-        class="absolute top-0 left-0 w-full h-full"
-        src="https://www.youtube.com/embed/AEZUoTgOOII?si=tN2UDfsSrdtqzPar"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        referrerpolicy="strict-origin-when-cross-origin"
-      ></iframe>
-    </div>
-  </div>
 </section>
+
 
 </section>
     <div
@@ -467,9 +507,8 @@ mysqli_close($koneksi);
         <!-- Judul & Deskripsi -->
         <div class="text-center space-y-2">
           <h2 class="text-3xl font-semibold text-neutral-900">Lomba</h2>
-          <p class="max-w-2xl mx-auto text-sm text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi
-            arcu, lobortis quis ligula vel, accumsan congue diam…
+          <p class="max-w-3xl mx-auto text-base md:text-lg text-gray-600">
+            panggung kreatif bagi kamu yang ingin menguji dan memamerkan kemampuan desain visual. Tahun ini kami membuka dua kategori: Poster Ilustrasi, di mana kamu dapat mengekspresikan ide atau pesan sosial melalui karya ilustratif, serta Character Design, untuk merancang karakter orisinal yang kuat dan berkarakter.
           </p>
         </div>
 
