@@ -11,13 +11,13 @@
 <nav class="grid grid-cols-2 gap-x-4 gap-y-2 sm:flex sm:justify-center sm:space-x-8 text-base md:text-lg">
   <!-- Kolom 1 -->
   <div class="flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-8 sm:items-center">
-    <a href="#finderdesc" style="font-family: 'Work Sans'" class="hover:text-white font-bold">Explore</a>
-    <a href="#about"     style="font-family: 'Work Sans'" class="hover:text-white">About</a>
-    <a href="#pameran"   style="font-family: 'Work Sans'" class="hover:text-white">Pameran</a>
+    <a href="homepage.php#finderdesc" style="font-family: 'Work Sans'" class="hover:text-white font-bold">Explore</a>
+    <a href="homepage.php#about"     style="font-family: 'Work Sans'" class="hover:text-white">About</a>
+    <a href="homepage.php#pameran"   style="font-family: 'Work Sans'" class="hover:text-white">Pameran</a>
   </div>
   <!-- Kolom 2 -->
   <div class="flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-8 sm:items-center">
-    <a href="#jadwal"    style="font-family: 'Work Sans'" class="hover:text-white">Jadwal</a>
+    <a href="homepage.php#jadwal"    style="font-family: 'Work Sans'" class="hover:text-white">Jadwal</a>
     <a href="submission.php" style="font-family: 'Work Sans'" class="hover:text-white">Lomba</a>
   </div>
 </nav>

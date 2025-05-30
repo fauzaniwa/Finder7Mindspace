@@ -36,7 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+     <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <script>
         tailwind.config = {
             theme: {
@@ -131,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <!-- Script Cursor -->
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
     <!-- Script Cursor -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
 </head>
 
 <body class="bg-black pt-40">
@@ -184,8 +189,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         class="rounded-lg pl-4 py-2 text-white bg-neutral-800 w-full placeholder:text-neutral-700">
                     <p class="italic text-neutral-500 text-sm pt-2">*Google Drive berisi surat Pernyataan Orisinalitas,
                         Karya, dan video proses pembuatan</p>
-                    <a href="submission.php#syarat"
+                    <div class="hover:cursor-pointer">
+                        <a href="submission.php#syarat"
                         class="italic text-emerald-400 hover:text-emerald-600 text-sm pt-2">Baca Ketentuan disini</a>
+                    </div>
                 </div>
                 <div class="flex justify-center">
                     <button type="submit"
