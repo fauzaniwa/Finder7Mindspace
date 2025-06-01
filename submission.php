@@ -344,7 +344,7 @@
                     <li>Peserta wajib mengunduh, mengisi, menandatangani dan mengunggah kembali Surat Pernyataan
                         Orisinalitas Karya.
                     </li>
-                    <li>Surat Pernyataan Orisinalitas Karya dapat diunduh di sini.</li>
+                    <li>Surat Pernyataan Orisinalitas Karya dapat diunduh <a href="https://drive.google.com/drive/folders/11tiUX9hAg-7iLA88x7rJ5iyBlavmRGJV?usp=sharing" target="_blank" class="underline text-emerald-400">di sini.</a></li>
                     <li>Peserta wajib mengisi formulir pengiriman karya yang tertera di sini, mulai tanggal 29 Mei - 25
                         Juni 2025 pukul 23.59 WIB.</li>
                     <li>Karya diunggah dengan format penamaan [Mata Lomba] - [Nama peserta].</li>
@@ -406,7 +406,7 @@
                     <li>Media desain digital.</li>
                     <li>Karya disajikan dalam bentuk character sheet yang memuat karakter tampak depan, tampak samping,
                         tampak belakang, dan variasi ekspresi sebanyak 3 jenis.</li>
-                    <li>Template character sheet berukuran A3 landscape dapat diunduh di sini.</li>
+                    <li>Template character sheet berukuran A3 landscape dapat diunduh <a href="https://drive.google.com/drive/folders/11tiUX9hAg-7iLA88x7rJ5iyBlavmRGJV?usp=sharing" target="_blank" class="underline text-emerald-400">di sini.</a></li>
                     <li>Wajib menyertakan nama karakter dan deskripsi singkat (maksimal 150 kata).</li>
                     <li>Karya dapat dibuat menggunakan software gambar seperti Clip Studio Paint, Adobe Illustrator,
                         Medibang, Ibis Paint, dan sejenisnya.</li>
