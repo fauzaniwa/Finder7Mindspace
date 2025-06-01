@@ -12,8 +12,8 @@
             <div class="hidden md:flex gap-6 justify-center">
                 <a href="homepage.php#finderdesc" style="font-family: 'Work Sans'" class="flex"><button
                         class="text-sm lg:text-xl text-white txt1">About</button></a>
-                <a href="homepage.php#pameran" style="font-family: 'Work Sans'" class="flex"><button
-                        class="text-sm lg:text-xl text-white txt2">Pameran</button></a>
+                <!-- <a href="homepage.php#pameran" style="font-family: 'Work Sans'" class="flex"><button
+                        class="text-sm lg:text-xl text-white txt2">Pameran</button></a> -->
                 <a href="homepage.php#jadwal" style="font-family: 'Work Sans'" class="flex"><button
                         class="text-sm lg:text-xl text-white txt">Jadwal</button></a>
                 <a href="submission.php" style="font-family: 'Work Sans'" class="flex"><button
@@ -58,10 +58,10 @@
                 <a href="homepage.php#finderdesc"><button style="font-family: 'Work Sans'"
                 class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">About</button></a>
             </div>
-            <div class="bg-[#0D0D0D] hover:bg-neutral-700 w-full p-2 transition duration-300 ease-in-out cursor-pointer">
+            <!-- <div class="bg-[#0D0D0D] hover:bg-neutral-700 w-full p-2 transition duration-300 ease-in-out cursor-pointer">
                 <a href="homepage.php#pameran"><button style="font-family: 'Work Sans'"
                 class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">Pameran</button></a>
-            </div>
+            </div> -->
             <div class="bg-[#0D0D0D] hover:bg-neutral-700 w-full p-2 transition duration-300 ease-in-out cursor-pointer">
                 <a href="homepage.php#jadwal"><button style="font-family: 'Work Sans'"
                 class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">Jadwal</button></a>
