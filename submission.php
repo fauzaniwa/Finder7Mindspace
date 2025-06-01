@@ -431,12 +431,20 @@
                     <li>Teknik dan kualitas visual (25%)</li>
                 </ol>
 
-                <a href="https://chat.whatsapp.com/EwcdEbO5GQIKENgzD6HK9C" target="_blank">
-                    <button
-                        class="submit-btn flex justify-center mx-auto bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white">Join
+                <div class="flex gap-4 justify-center items-center mx-auto pt-8">
+
+                    <a href="https://chat.whatsapp.com/EwcdEbO5GQIKENgzD6HK9C" target="_blank">
+                        <button
+                        class="submit-btn bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white">Join
                         Grup Whatsapp</button>
-                </a>
-            </div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/11tiUX9hAg-7iLA88x7rJ5iyBlavmRGJV?usp=sharing"
+                            target="_blank">
+                        <button
+                        class="submit-btn flex justify-center mx-auto bg-neutral-600 hover:bg-neutral-700 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white">Dowload Berkas</button>
+                    </a>
+                    </div>
+                </div>
 
             <div id="poster"
                 class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-10 md:p-24 py-12 md:py-32 bg-neutral-800 text-white ">
@@ -475,11 +483,18 @@
                     <li>Makna dan interpretasi karya (25%)</li>
                 </ol>
 
-                <a href="https://chat.whatsapp.com/CwR2w1GobuJFpEM1SdDN8m" target="_blank">
-                    <button
+                <div class="flex gap-4 justify-center items-center mx-auto pt-8">
+                    <a href="https://chat.whatsapp.com/CwR2w1GobuJFpEM1SdDN8m" target="_blank">
+                        <button
                         class="submit-btn flex justify-center mx-auto bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white">Join
                         Grup Whatsapp</button>
-                </a>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/11tiUX9hAg-7iLA88x7rJ5iyBlavmRGJV?usp=sharing"
+                            target="_blank">
+                        <button
+                        class="submit-btn flex justify-center mx-auto bg-neutral-600 hover:bg-neutral-700 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white">Dowload Berkas</button>
+                    </a>
+                </div>
             </div>
         </section>
     </div>
