@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <script>
         tailwind.config = {
             theme: {
@@ -110,28 +110,28 @@
 <body class="bg-black">
     <?php
     require '_navbar.php'
-    ?>
+        ?>
     <div
         class="w-2/3 h-3/4 blur-3xl absolute -z-10 rounded-full bg-[radial-gradient(circle,_#515151_0%,_rgba(244,114,182,0)_70%)] top-px left-1/2 -translate-x-1/2 -translate-y-1/2">
     </div>
 
     <!-- Hero Section -->
     <section class="hero relative min-h-screen px-4  flex items-center justify-center w-full mx-auto overflow-hidden ">
-         <!-- Kiri Atas -->
-    <img src="./img/hero/1.png" alt="" 
-         class="hidden sm:block absolute top-0 left-0 -translate-x-1/3 translate-y-1/3 w-1/4 z-10">
+        <!-- Kiri Atas -->
+        <img src="./img/hero/1.png" alt=""
+            class="hidden sm:block absolute top-0 left-0 -translate-x-1/3 translate-y-1/3 w-1/4 z-10">
 
-    <!-- Kanan Atas -->
-    <img src="./img/hero/3.png" alt="" 
-         class="hidden sm:block absolute top-0 right-0 translate-x-1/2 translate-y-1/4 w-1/4 z-10">
+        <!-- Kanan Atas -->
+        <img src="./img/hero/3.png" alt=""
+            class="hidden sm:block absolute top-0 right-0 translate-x-1/2 translate-y-1/4 w-1/4 z-10">
 
-    <!-- Kiri Bawah -->
-    <img src="./img/hero/2.png" alt="" 
-         class="hidden sm:block absolute bottom-0 left-0 -translate-x-1/3 -translate-y-1/8 w-1/4 z-10">
+        <!-- Kiri Bawah -->
+        <img src="./img/hero/2.png" alt=""
+            class="hidden sm:block absolute bottom-0 left-0 -translate-x-1/3 -translate-y-1/8 w-1/4 z-10">
 
-    <!-- Kanan Bawah -->
-    <img src="./img/hero/4.png" alt="" 
-         class="hidden sm:block absolute bottom-0 right-0 w-32 md:w-48 lg:w-1/4 translate-x-1/3 -translate-y-1/8 z-10">
+        <!-- Kanan Bawah -->
+        <img src="./img/hero/4.png" alt=""
+            class="hidden sm:block absolute bottom-0 right-0 w-32 md:w-48 lg:w-1/4 translate-x-1/3 -translate-y-1/8 z-10">
 
         <div class="justify-center flex flex-col items-center p-10 max-w-xl mx-auto py-72 ">
             <div class="countdown flex justify-center gap-2 items-center mb-4">
@@ -187,12 +187,12 @@
     <!-- Deskripsi Section -->
     <section id="deskripsi" class="deskripsi relative py-[32rem] mx-auto overflow-hidden w-full">
         Kanan Atas
-    <img src="./img/Submission/Supergraphic2.png" alt="" 
-         class="hidden sm:block absolute top-0 right-0 translate-x-1/2 translate-y-1/4 w-1/3 z-10">
+        <img src="./img/Submission/Supergraphic2.png" alt=""
+            class="hidden sm:block absolute top-0 right-0 translate-x-1/2 translate-y-1/4 w-1/3 z-10">
 
-    Kiri Bawah
-    <img src="./img/Submission/Supergraphic1.png" alt="" 
-         class="hidden sm:block absolute bottom-0 left-0 -translate-x-1/2 -translate-y-1/4 w-1/3 z-10">
+        Kiri Bawah
+        <img src="./img/Submission/Supergraphic1.png" alt=""
+            class="hidden sm:block absolute bottom-0 left-0 -translate-x-1/2 -translate-y-1/4 w-1/3 z-10">
         <div class="flex flex-col justify-center items-center text-center text-white  mx-auto max-w-5xl px-12">
             <h1 class="text-3xl md:text-5xl font-bold w-2/3 md:w-auto ">Sekilas Tentang FINDER 7</h1>
             <br>
@@ -222,20 +222,20 @@
     </div> -->
         <section class="timeline flex flex-col justify-center w-full mx-auto ">
             <h1 class="text-3xl md:text-6xl font-bold text-white text-center mb-16 md:mb-32">Timeline</h1>
-            <img src="./img/Submission/Timeline 2.png" alt="" class="hidden sm:block w-10/12 justify-center mx-auto">
-            <img src="./img/Submission/timeline-mobile.png" alt="" class="block sm:hidden w-full">
+            <img src="./img/Submission/Timeline.png" alt="" class="hidden sm:block w-10/12 justify-center mx-auto">
+            <img src="./img/Submission/Timeline2.png" alt="" class="block sm:hidden w-full">
         </section>
     </div>
     <br><br><br><br><br><br><br><br>
 
     <!-- Prize Section -->
     <section class="prize flex flex-col justify-center">
-            <h1 class="text-3xl md:text-6xl font-bold text-white text-center mb-16 md:mb-32">Prizes</h1>
+        <h1 class="text-3xl md:text-6xl font-bold text-white text-center mb-16 md:mb-32">Prizes</h1>
         <div class="flex-col flex md:flex-row bg-neutral-800 w-full text-white">
             <div class="flex flex-col w-full md:w-1/4 p-10">
                 <div class="flex flex-col">
                     <h1 class=" text-center font-bold text-2xl md:text-3xl pb-10">Juara 1</h1>
-                    <img src="./img/Submission/juara 1-mix 1.png" alt="" class="w-72 h-auto mx-auto">
+                    <img src="./img/Submission/juara1.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col">
                     <h1 class="text-center italic font-semibold text-2xl pb-4"> Rp. 1.750.000,-</h1>
@@ -246,7 +246,7 @@
             <div class="flex flex-row md:flex-col w-full md:w-1/4 p-10 items-center gap-4 md:gap-0">
                 <div class="flex flex-col w-1/2 md:w-full">
                     <h1 class="hidden md:block text-center font-bold text-3xl pb-10">Juara 2</h1>
-                    <img src="./img/Submission/juara 2-mix 1.png" alt="" class="w-72 h-auto mx-auto">
+                    <img src="./img/Submission/juara2.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col w-1/2 md:w-full ">
                     <h1 class="block md:hidden text-left font-bold text-2xl pb-3">Juara 2</h1>
@@ -260,7 +260,7 @@
             <div class="flex flex-row md:flex-col w-full md:w-1/4 p-10 items-center gap-4 md:gap-0">
                 <div class="flex flex-col w-1/2 md:w-full">
                     <h1 class="hidden md:block text-center font-bold text-3xl pb-10">Juara 3</h1>
-                    <img src="./img/Submission/juara 3-mix 1.png" alt="" class="w-72 h-auto mx-auto">
+                    <img src="./img/Submission/juara3.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col w-1/2 md:w-full ">
                     <h1 class="block md:hidden text-left font-bold text-2xl pb-3">Juara 3</h1>
@@ -274,7 +274,7 @@
             <div class="flex flex-row md:flex-col w-full md:w-1/4 p-10 items-center gap-4 md:gap-0">
                 <div class="flex flex-col w-1/2 md:w-full">
                     <h1 class="hidden md:block text-center font-bold text-3xl pb-10">Juara Favorit</h1>
-                    <img src="./img/Submission/harapan 1.png" alt="" class="w-72 h-auto mx-auto">
+                    <img src="./img/Submission/harapan1.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col w-1/2 md:w-full ">
                     <h1 class="block md:hidden text-left font-bold text-2xl pb-3">Juara Favorit</h1>
@@ -344,7 +344,9 @@
                     <li>Peserta wajib mengunduh, mengisi, menandatangani dan mengunggah kembali Surat Pernyataan
                         Orisinalitas Karya.
                     </li>
-                    <li>Surat Pernyataan Orisinalitas Karya dapat diunduh <a href="https://drive.google.com/drive/folders/11tiUX9hAg-7iLA88x7rJ5iyBlavmRGJV?usp=sharing" target="_blank" class="underline text-emerald-400">di sini.</a></li>
+                    <li>Surat Pernyataan Orisinalitas Karya dapat diunduh <a
+                            href="https://drive.google.com/drive/folders/11tiUX9hAg-7iLA88x7rJ5iyBlavmRGJV?usp=sharing"
+                            target="_blank" class="underline text-emerald-400">di sini.</a></li>
                     <li>Peserta wajib mengisi formulir pengiriman karya yang tertera di sini, mulai tanggal 29 Mei - 25
                         Juni 2025 pukul 23.59 WIB.</li>
                     <li>Karya diunggah dengan format penamaan [Mata Lomba] - [Nama peserta].</li>
@@ -381,7 +383,7 @@
 
     <div
         class="flex flex-col md:flex-row mx-auto text-center justify-center gap-5 text-base md:text-lg font-semibold text-neutral-600 pb-10">
-        <a href="#desainkarakter" class="nav2-tab text-emerald-400 underline">Design Character</a>
+        <a href="#desainkarakter" class="nav2-tab text-emerald-400 underline">Character Design</a>
         <a href="#poster" class="nav2-tab">Poster Illustration</a>
     </div>
     <div class="relative">
@@ -406,7 +408,9 @@
                     <li>Media desain digital.</li>
                     <li>Karya disajikan dalam bentuk character sheet yang memuat karakter tampak depan, tampak samping,
                         tampak belakang, dan variasi ekspresi sebanyak 3 jenis.</li>
-                    <li>Template character sheet berukuran A3 landscape dapat diunduh <a href="https://drive.google.com/drive/folders/11tiUX9hAg-7iLA88x7rJ5iyBlavmRGJV?usp=sharing" target="_blank" class="underline text-emerald-400">di sini.</a></li>
+                    <li>Template character sheet berukuran A3 landscape dapat diunduh <a
+                            href="https://drive.google.com/drive/folders/11tiUX9hAg-7iLA88x7rJ5iyBlavmRGJV?usp=sharing"
+                            target="_blank" class="underline text-emerald-400">di sini.</a></li>
                     <li>Wajib menyertakan nama karakter dan deskripsi singkat (maksimal 150 kata).</li>
                     <li>Karya dapat dibuat menggunakan software gambar seperti Clip Studio Paint, Adobe Illustrator,
                         Medibang, Ibis Paint, dan sejenisnya.</li>
@@ -426,6 +430,12 @@
                     <li>Kekuatan naratif atau latar belakang karakter (20%)</li>
                     <li>Teknik dan kualitas visual (25%)</li>
                 </ol>
+
+                <a href="https://chat.whatsapp.com/EwcdEbO5GQIKENgzD6HK9C" target="_blank">
+                    <button
+                        class="submit-btn flex justify-center mx-auto bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white">Join
+                        Grup Whatsapp</button>
+                </a>
             </div>
 
             <div id="poster"
@@ -433,7 +443,8 @@
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Tema</h1>
                 <h2 class="text-base md:text-xl text-left md:text-left font-semibold pb-3 italic">DEEP STATE OF MIND
                 </h2>
-                <p class="text-sm md:text-xl text-left md:text-left"> Peserta ditantang untuk menciptakan sebuah desain poster ilustrasi yang menggambarkan tentang pikiran terdalam yang ada dalam diri manusia</p>
+                <p class="text-sm md:text-xl text-left md:text-left"> Peserta ditantang untuk menciptakan sebuah desain
+                    poster ilustrasi yang menggambarkan tentang pikiran terdalam yang ada dalam diri manusia</p>
                 <br><br>
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Ketentuan</h1>
                 <ol
@@ -445,7 +456,8 @@
                     <li>Karya dibuat dalam ukuran A3 portrait.</li>
                     <li>Karya dapat dibuat menggunakan software gambar seperti Clip Studio Paint, Adobe Illustrator,
                         Medibang, Ibis Paint, dan sejenisnya.</li>
-                    <li>Karya tidak boleh menggunakan stock image, aset elemen lain (kecuali brush, pattern, dan effect bawaan software yang digunakan), dan template selain ilustrasi orisinal peserta.</li>
+                    <li>Karya tidak boleh menggunakan stock image, aset elemen lain (kecuali brush, pattern, dan effect
+                        bawaan software yang digunakan), dan template selain ilustrasi orisinal peserta.</li>
                     <li>Format file .JPEG atau .PNG, resolusi minimal 300 DPI, dan format pewarnaan RGB.</li>
                     <li>Pemenang karya terpilih akan dihubungi panitia untuk mengirimkan karya dalam format file .PDF
                         dengan format pewarnaan CMYK untuk keperluan cetak.</li>
@@ -462,6 +474,12 @@
                     <li>Kekuatan visual dan teknis desain (25%)</li>
                     <li>Makna dan interpretasi karya (25%)</li>
                 </ol>
+
+                <a href="https://chat.whatsapp.com/CwR2w1GobuJFpEM1SdDN8m" target="_blank">
+                    <button
+                        class="submit-btn flex justify-center mx-auto bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white">Join
+                        Grup Whatsapp</button>
+                </a>
             </div>
         </section>
     </div>
@@ -471,7 +489,7 @@
     <section class="judges">
         <h1 class="text-5xl text-center text-white font-bold">Judges</h1>
         <div class="flex mt-10 justify-center">
-            <div class="text-white py-1 px-10 bg-neutral-800 rounded-full ">Design Characters</div>
+            <div class="text-white py-1 px-10 bg-neutral-800 rounded-full ">Character Design</div>
         </div>
 
 
@@ -479,34 +497,37 @@
             <div class="flex flex-col  max-w-64">
 
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
-                    <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
+                    <img src="./img/Submission/Juri1desainkarakter.png" alt=""
+                        class="w-full h-80 object-cover cursor-pointer popup-image"
+                        data-img="./img/Submission/Juri1desainkarakter.png">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 1</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Romy Hernadi</h2>
                 <div class="max-w-full">
-                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit... </p>
+                    <p class=" text-center text-sm text-gray-400">Komikus, Illustrator</p>
                 </div>
             </div>
             <div class="flex flex-col  max-w-64">
 
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
-                    <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
+                    <img src="./img/Submission/Juri2desainkarakter.png" alt=""
+                        class="w-full h-80 object-cover cursor-pointer popup-image"
+                        data-img="./img/Submission/Juri2desainkarakter.png">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 2</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Diah Mayang Sari, M.Ds.</h2>
                 <div class="max-w-full">
-                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit... </p>
+                    <p class=" text-center text-sm text-gray-400">Dosen DKV UPI</p>
                 </div>
             </div>
             <div class="flex flex-col  max-w-64">
 
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
-                    <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
+                    <img src="./img/Submission/Juri3desainkarakter.png" alt=""
+                        class="w-full h-80 object-cover cursor-pointer popup-image"
+                        data-img="./img/Submission/Juri3desainkarakter.png">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 3</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Dewi Iriani, M.Ds.</h2>
                 <div class="max-w-full">
-                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit... </p>
+                    <p class=" text-center text-sm text-gray-400">Dosen DKV UPI</p>
                 </div>
             </div>
         </div>
@@ -518,34 +539,37 @@
             <div class="flex flex-col max-w-64">
 
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
-                    <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
+                    <img src="./img/Submission/Juri1ilustrasi.png" alt=""
+                        class="w-full h-80 object-cover cursor-pointer popup-image"
+                        data-img="./img/Submission/Juri1ilustrasi.png">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 1</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5">Aji Juasal Mahendra</h2>
                 <div class="max-w-full">
-                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit... </p>
-                </div>
-            </div>
-            <div class="flex flex-col max-w-64">
-
-                <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
-                    <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
-                </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 2</h2>
-                <div class="max-w-full">
-                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit... </p>
+                    <p class=" text-center text-sm text-gray-400">Visual Artist, Desainer Grafis</p>
                 </div>
             </div>
             <div class="flex flex-col  max-w-64">
 
                 <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
-                    <img src="https://via.placeholder.com/500x300" alt="" class=" w-full h-80 object-cover">
+                    <img src="./img/Submission/Juri2ilustrasi.png" alt=""
+                        class="w-full h-80 object-cover cursor-pointer popup-image"
+                        data-img="./img/Submission/Juri2ilustrasi.png">
                 </div>
-                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Juri 3</h2>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Palupi Argani, S. Ds, M.Ds.</h2>
                 <div class="max-w-full">
-                    <p class=" text-center text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit... </p>
+                    <p class=" text-center text-sm text-gray-400">Dosen DKV UPI</p>
+                </div>
+            </div>
+            <div class="flex flex-col max-w-64">
+
+                <div class="w-auto h-auto bg-neutral-900 rounded-3xl overflow-hidden shadow-lg relative">
+                    <img src="./img/Submission/Juri3ilustrasi.png" alt=""
+                        class="w-full h-80 object-cover cursor-pointer popup-image"
+                        data-img="./img/Submission/Juri3ilustrasi.png">
+                </div>
+                <h2 class="text-lg font-semibold text-white text-center pt-5    ">Dwita Alfiani, M.Ds.</h2>
+                <div class="max-w-full">
+                    <p class=" text-center text-sm text-gray-400">Dosen DKV UPI</p>
                 </div>
             </div>
         </div>
@@ -560,8 +584,8 @@
         </a>
     </div>
     <br><br><br><br><br><br>
-    
-<!-- Script Toggle -->
+
+    <!-- Script Toggle -->
     <script>
         const navLinks = document.querySelector('.nav-links');
         function onToggleMenu(e) {
@@ -629,9 +653,48 @@
         }
     </script>
 
- <?php
+    <?php
     require '_footer.php';
     ?>
+
+    <!-- Modal Gambar -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black bg-opacity-80 hidden items-center justify-center">
+        <div class="relative">
+            <button id="closeModal"
+                class="absolute -top-0 -right-0 bg-white text-black rounded-xl px-4 p-2 hover:bg-gray-200 z-10">✕</button>
+            <img id="modalImage" src="" class="max-w-[90vw] max-h-[90vh] rounded-xl shadow-2xl" />
+        </div>
+    </div>
+
+    <script>
+        // Ambil elemen-elemen yang dibutuhkan
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const closeModal = document.getElementById("closeModal");
+
+        // Event saat klik gambar
+        document.querySelectorAll(".popup-image").forEach(img => {
+            img.addEventListener("click", () => {
+                const src = img.getAttribute("data-img");
+                modalImage.src = src;
+                modal.classList.remove("hidden");
+                modal.classList.add("flex");
+            });
+        });
+
+        // Event tombol close
+        closeModal.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+
+        // Klik di luar gambar untuk menutup
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.add("hidden");
+            }
+        });
+    </script>
+
 </body>
 <script src="https://unpkg.com/kursor"></script>
 <script>
@@ -646,8 +709,8 @@
     // Hapus localStorage lama (kalau pernah pakai sebelumnya)
     localStorage.removeItem('countdownEnd');
 
-    // Target: 30 Mei 2025 pukul 23:59 WIB → 16:59 UTC
-    const targetDate = new Date(Date.UTC(2025, 4, 30, 16, 59, 0));
+    // Target: 25 Juni 2025 pukul 23:59 WIB → 16:59 UTC
+    const targetDate = new Date(Date.UTC(2025, 5, 25, 16, 59, 0));
     const endTime = targetDate.getTime();
 
     const digits = document.querySelectorAll('.digit');
@@ -679,6 +742,7 @@
 
     const timer = setInterval(updateCountdown, 1000);
     updateCountdown();
+
 
 
 

@@ -174,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 data-value="poster">Poster Illustration</button>
             <button type="button"
                 class="switch-btn bg-neutral-800 text-neutral-700 px-4 py-2 rounded-xl w-full duration-300 ease-in-out"
-                data-value="desain karakter">Design Character</button>
+                data-value="desain karakter">Character Design</button>
         </div>
         <br>
         <div class="flex justify-center items-center py-12 px-5 bg-neutral-900 rounded-xl w-10/12 md:w-6/12 ">
