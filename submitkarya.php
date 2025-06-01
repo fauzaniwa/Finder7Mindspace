@@ -127,6 +127,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       .test {
         background: red !important;
       }
+      .modal {
+  display: none;
+}
+
+.modal.show {
+  display: flex;
+}
+
     </style>
     <title>Finder - Lomba Ilustrasi</title>
     <link rel="icon" href="./img/FinderLogo.svg" type="image/x-icon" />
@@ -140,7 +148,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body class="bg-black pt-40">
-    <?php require '_navbar.php'; ?>
+<!-- Trigger button (optional) -->
+<!-- <button onclick="openModal()" class="bg-emerald-500 text-white px-4 py-2 rounded">Lihat Info</button> -->
+
+<!-- Modal -->
+<div id="infoModal" class="modal fixed inset-0 bg-black bg-opacity-60 hidden justify-center items-center z-50">
+  <div class="bg-neutral-900 rounded-xl px-8 py-6 w-11/12 md:w-1/2 text-center text-white shadow-lg relative">
+    <h2 class="text-xl md:text-2xl font-bold mb-4 text-emerald-400">Kami Akan Kembali!</h2>
+    <p class="text-sm md:text-base text-neutral-300">Ayo persiapkan karya kamu dan kumpulkan di sini.</p>
+    <button onclick="closeModal()" class="mt-6 bg-emerald-400 hover:bg-emerald-600 text-black px-6 py-2 rounded-xl shadow">
+      Oke
+    </button>
+  </div>
+</div>
+
+<?php require '_navbar.php'; ?>
     <div class=" flex flex-col justify-center items-center pb-20 ">
         <div class="pb-10">
             <h1 class="font-bold text-3xl text-white"> Submit Karya</h1>
@@ -202,6 +224,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </form>
         </div>
     </div>
+
+    <script>
+  function openModal() {
+    const modal = document.getElementById('infoModal');
+    modal.classList.add('show');
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('infoModal');
+    modal.classList.remove('show');
+    modal.classList.add('hidden');
+  }
+
+  // Modal muncul otomatis saat halaman dibuka
+  window.addEventListener('load', () => {
+    openModal();
+  });
+</script>
+
     <!-- Script Toggle -->
     <script>
         const navLinks = document.querySelector('.nav-links');
