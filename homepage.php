@@ -440,11 +440,13 @@ mysqli_close($koneksi);
       </h2>
 
       <!-- Card Placeholder -->
-      <div class="bg-gray-200 rounded-xl p-8 flex justify-center items-center h-64">
-        <span class="bg-white text-xs uppercase px-4 py-2 rounded-full shadow">
-          Coming Soon
-        </span>
-      </div>
+<!-- Card Placeholder with Background Image -->
+<div class="bg-center bg-cover bg-no-repeat rounded-xl p-8 flex justify-center items-center h-64" style="background-image: url('img/CoomingSoon.png');">
+  <span class="bg-white text-xs uppercase px-4 py-2 rounded-full shadow">
+    Coming Soon
+  </span>
+</div>
+
     </div>
   </section>
 
