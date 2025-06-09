@@ -1,31 +1,6 @@
 <?php
 include 'admin-one/dist/koneksi.php';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Ambil dan bersihkan data dari form
-    $kategori = bersihkanInput($_POST["kategori_karya"]);
-    $nama = bersihkanInput($_POST["Nama_Lengkap"]);
-    $telepon = bersihkanInput($_POST["Nomor_Telepon"]);
-    $email = bersihkanInput($_POST["Email"]);
-    $instansi = bersihkanInput($_POST["Instansi"]);
-    $judul = bersihkanInput($_POST["Judul_Karya"]);
-    $sosial = bersihkanInput($_POST["Media_Sosial"]);
-    $deskripsi = bersihkanInput($_POST["Deskripsi_Karya"]);
-    $link = bersihkanInput($_POST["Link_Karya"]);
-
-    // Simpan ke database
-    $stmt = $koneksi->prepare("INSERT INTO submission (kategori_karya, nama, nomor_telepon, email, instansi, judul_karya, media_sosial, deskripsi_karya, link_karya) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssssss", $kategori, $nama, $telepon, $email, $instansi, $judul, $sosial, $deskripsi, $link);
-
-    if ($stmt->execute()) {
-        echo "<script>alert('Berhasil Submit!'); window.location.href='submitkarya.php';</script>";
-    } else {
-        echo "Gagal: " . $stmt->error;
-    }
-
-    $stmt->close();
-    $koneksi->close();
-}
 ?>
 
 
@@ -37,11 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-     <script src="https://cdn.tailwindcss.com"></script>
-      <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <script>
         tailwind.config = {
             theme: {
@@ -135,6 +110,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
+
     </style>
     <title>Finder - Lomba Ilustrasi</title>
     <link rel="icon" href="./img/FinderLogo.svg" type="image/x-icon" />
@@ -148,11 +128,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body class="bg-black pt-40">
-<!-- Trigger button (optional) -->
-<!-- <button onclick="openModal()" class="bg-emerald-500 text-white px-4 py-2 rounded">Lihat Info</button> -->
+    <!-- Trigger button (optional) -->
+    <!-- <button onclick="openModal()" class="bg-emerald-500 text-white px-4 py-2 rounded">Lihat Info</button> -->
 
-<!-- Modal -->
-<div id="infoModal" class="modal fixed inset-0 bg-black bg-opacity-60 hidden justify-center items-center z-50">
+    <!-- Modal -->
+    <!-- <div id="infoModal" class="modal fixed inset-0 bg-black bg-opacity-60 hidden justify-center items-center z-50">
   <div class="bg-neutral-900 rounded-xl px-8 py-6 w-11/12 md:w-1/2 text-center text-white shadow-lg relative">
     <h2 class="text-xl md:text-2xl font-bold mb-4 text-emerald-400">Kami Akan Kembali!</h2>
     <p class="text-sm md:text-base text-neutral-300">Ayo persiapkan karya kamu dan kumpulkan di sini.</p>
@@ -160,89 +140,193 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       Oke
     </button>
   </div>
+</div> -->
+
+
+    <?php require '_navbar.php'; ?>
+    <div class="flex flex-col justify-center items-center pb-20">
+  <!-- Modal Success -->
+<div id="successModal" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+  <div class="bg-emerald-400 text-black rounded-xl p-8 max-w-sm text-center shadow-lg">
+    <h2 class="text-2xl font-bold mb-4">Karya berhasil dikirim!</h2>
+    <p>Terima kasih atas partisipasi Anda.</p>
+    <button id="closeSuccessModal" class="mt-6 bg-black text-emerald-400 px-6 py-2 rounded-xl font-semibold hover:bg-neutral-900">Tutup</button>
+  </div>
 </div>
 
-<?php require '_navbar.php'; ?>
-    <div class=" flex flex-col justify-center items-center pb-20 ">
+
         <div class="pb-10">
-            <h1 class="font-bold text-3xl text-white"> Submit Karya</h1>
+            <h1 class="font-bold text-3xl text-white">Submit Karya</h1>
         </div>
+
         <!-- Switch Button -->
         <div class="flex bg-neutral-800 w-10/12 md:w-6/12 rounded-xl overflow-hidden font-semibold italic">
+            <button type="button" class="switch-btn bg-emerald-400 text-black px-4 py-2 w-full duration-300 ease-in-out"
+                data-value="Poster Illustration">Poster Illustration</button>
             <button type="button"
-                class="switch-btn bg-emerald-400 text-black px-4 py-2 rounded-xl w-full duration-300 ease-in-out"
-                data-value="poster">Poster Illustration</button>
-            <button type="button"
-                class="switch-btn bg-neutral-800 text-neutral-700 px-4 py-2 rounded-xl w-full duration-300 ease-in-out"
-                data-value="desain karakter">Character Design</button>
+                class="switch-btn bg-neutral-800 text-neutral-700 px-4 py-2 w-full duration-300 ease-in-out"
+                data-value="Character Design">Character Design</button>
         </div>
+
+        <!-- Form -->
         <br>
-        <div class="flex justify-center items-center py-12 px-5 bg-neutral-900 rounded-xl w-10/12 md:w-6/12 ">
-            <form id="form" action="submitkarya.php" method="post" class="flex flex-col gap-5 w-full">
+        <div class="flex justify-center items-center py-12 px-5 bg-neutral-900 rounded-xl w-10/12 md:w-6/12">
 
-                <!-- Hidden Input untuk simpan pilihan aktif -->
-                <input type="hidden" name="kategori_karya" id="kategori_karya" value="poster">
+            <form id="form" action="process_submitkarya.php" method="post" class="flex flex-col gap-5 w-full">
 
-                <div class="flex gap-5 justify-center">
-                    <input type="text" id="nama" name="Nama_Lengkap" placeholder="Nama Lengkap"
-                        class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
-                    <input type="text" id="nomortelepon" name="Nomor Telepon" placeholder="Nomor Telepon"
-                        class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
-                </div>
-                <div class="flex gap-5 justify-center">
-                    <input type="text" id="email" name="Email" placeholder="Email"
-                        class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
-                    <input type="text" id="instansi" name="Instansi" placeholder="Instansi (Opsional)"
-                        class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
-                </div>
-                <div class="flex gap-5 justify-center">
-                    <input type="text" id="judulkarya" name="Judul_Karya" placeholder="Judul Karya"
-                        class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
-                    <input type="text" id="sosialmedia" name="Media_Sosial" placeholder="Media Sosial"
-                        class=" rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
-                </div>
-                <div>
-                    <textarea type="text" id="deskripsi" name="Deskripsi_Karya" placeholder="Deskripsi karya" rows="13"
-                        cols="50"
-                        class="rounded-lg px-4 py-2 text-white bg-neutral-800 w-full placeholder:text-neutral-700 placeholder:text-center placeholder:pt-32"></textarea>
-                </div>
-                <div>
-                    <input type="text" id="linkkarya" name="Link_Karya" placeholder="Link Google Drive"
-                        class="rounded-lg pl-4 py-2 text-white bg-neutral-800 w-full placeholder:text-neutral-700">
-                    <p class="italic text-neutral-500 text-sm pt-2">*Google Drive berisi surat Pernyataan Orisinalitas,
-                        Karya, dan video proses pembuatan</p>
-                    <div class="hover:cursor-pointer">
-                        <a href="submission.php#syarat"
-                        class="italic text-emerald-400 hover:text-emerald-600 text-sm pt-2">Baca Ketentuan disini</a>
+                <!-- Modal Konfirmasi -->
+                <div id="infoModal" class="modal fixed inset-0 bg-black bg-opacity-60 justify-center items-center z-50"
+                    style="display:none;">
+                    <div
+                        class="bg-neutral-900 rounded-xl px-8 py-6 w-11/12 md:w-1/2 text-center text-white shadow-lg relative">
+                        <h2 class="text-xl md:text-2xl font-bold mb-4 text-emerald-400">
+                            Apakah data yang Anda isi sudah benar?
+                        </h2>
+                        <p class="text-sm md:text-base text-neutral-300">
+                            Pastikan semua informasi sudah sesuai sebelum dikirim.
+                        </p>
+                        <div class="mt-6 flex justify-center gap-4">
+                            <button type="button" id="confirmSubmitBtn"
+                                class="bg-emerald-400 hover:bg-emerald-600 text-black px-6 py-2 rounded-xl shadow">
+                                Ya, Kirim
+                            </button>
+                            <button type="button" id="cancelSubmitBtn"
+                                class="bg-neutral-700 hover:bg-neutral-600 text-white px-6 py-2 rounded-xl shadow">
+                                Kembali
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-center">
-                    <button type="submit"
-                        class="bg-emerald-400 hover:bg-emerald-600 text-black px-20 py-2 rounded-xl shadow">Submit</button>
 
+                <!-- Hidden input for selected category -->
+                <input type="hidden" name="kategori_karya" id="kategori_karya" value="Poster Illustration">
+
+                <div class="flex gap-5 justify-center">
+                    <input type="text" id="nama" name="Nama_Lengkap" placeholder="Nama Lengkap" required
+                        class="rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                    <input type="text" id="nomortelepon" name="Nomor_Telepon" placeholder="Nomor Telepon" required
+                        class="rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                </div>
+
+                <div class="flex gap-5 justify-center">
+                    <input type="email" id="email" name="Email" placeholder="Email" required
+                        class="rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                    <input type="text" id="instansi" name="Instansi" placeholder="Instansi (Opsional)"
+                        class="rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                </div>
+
+                <div class="flex gap-5 justify-center">
+                    <input type="text" id="judulkarya" name="Judul_Karya" placeholder="Judul Karya" required
+                        class="rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                    <input type="text" id="sosialmedia" name="Media_Sosial" placeholder="Instagram" required
+                        class="rounded-lg pl-4 py-2 text-white bg-neutral-800 placeholder:text-neutral-700 w-full">
+                </div>
+
+                <div>
+                    <textarea id="deskripsi" name="Deskripsi_Karya" placeholder="Deskripsi karya" rows="13" cols="50"
+                        required
+                        class="rounded-lg px-4 py-2 text-white bg-neutral-800 w-full placeholder:text-neutral-700 placeholder:text-center placeholder:pt-32"></textarea>
+                </div>
+
+                <div>
+                    <input type="url" id="linkkarya" name="Link_Karya" placeholder="Link Google Drive" required
+                        class="rounded-lg pl-4 py-2 text-white bg-neutral-800 w-full placeholder:text-neutral-700">
+                    <p class="italic text-neutral-500 text-sm pt-2">
+                        *Google Drive berisi surat Pernyataan Orisinalitas, Karya, dan video proses pembuatan
+                    </p>
+                    <div class="hover:cursor-pointer">
+                        <a href="submission.php#syarat"
+                            class="italic text-emerald-400 hover:text-emerald-600 text-sm pt-2">Baca Ketentuan
+                            disini</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3 text-white text-sm">
+                    <input type="checkbox" id="persetujuan" name="persetujuan" required
+                        class="accent-emerald-400 w-5 h-5 mt-1 rounded border border-neutral-600 focus:ring-emerald-500 focus:ring-2 transition">
+                    <label for="persetujuan">
+                        Saya menyetujui <a href="submission.php#syarat"
+                            class="text-emerald-400 hover:text-emerald-600 underline">syarat dan ketentuan</a>.
+                    </label>
+                </div>
+
+                <div class="flex justify-center">
+                    <button type="button" id="btnShow"
+                        class="bg-emerald-400 hover:bg-emerald-600 text-black px-20 py-2 rounded-xl shadow">
+                        Submit
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 
     <script>
-  function openModal() {
-    const modal = document.getElementById('infoModal');
-    modal.classList.add('show');
-    modal.classList.remove('hidden');
-  }
+  document.addEventListener("DOMContentLoaded", () => {
+    // Cek query param success=1
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === '1') {
+      const modal = document.getElementById('successModal');
+      modal.classList.remove('hidden');
 
-  function closeModal() {
-    const modal = document.getElementById('infoModal');
-    modal.classList.remove('show');
-    modal.classList.add('hidden');
-  }
-
-  // Modal muncul otomatis saat halaman dibuka
-  window.addEventListener('load', () => {
-    openModal();
+      document.getElementById('closeSuccessModal').addEventListener('click', () => {
+        modal.classList.add('hidden');
+        // Hapus param URL supaya modal tidak muncul lagi saat refresh
+        window.history.replaceState({}, document.title, window.location.pathname);
+      });
+    }
   });
 </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btnShow = document.getElementById("btnShow");
+            const modal = document.getElementById("infoModal");
+            const form = document.getElementById("form");
+            const btnConfirm = document.getElementById("confirmSubmitBtn");
+            const btnCancel = document.getElementById("cancelSubmitBtn");
+
+            btnShow.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                if (form.checkValidity()) {
+                    modal.style.display = "flex"; // show modal
+                } else {
+                    form.reportValidity();
+                }
+            });
+
+            btnCancel.addEventListener("click", () => {
+                modal.style.display = "none"; // hide modal
+            });
+
+            btnConfirm.addEventListener("click", () => {
+                modal.style.display = "none"; // hide modal
+                form.submit(); // submit form setelah konfirmasi
+            });
+
+            // --- SWITCH BUTTONS ---
+            const switchButtons = document.querySelectorAll(".switch-btn");
+            const kategoriInput = document.getElementById("kategori_karya");
+
+            switchButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    kategoriInput.value = button.getAttribute("data-value");
+
+                    switchButtons.forEach(btn => {
+                        btn.classList.remove("bg-emerald-400", "text-black");
+                        btn.classList.add("bg-neutral-800", "text-neutral-700");
+                    });
+
+                    button.classList.add("bg-emerald-400", "text-black");
+                    button.classList.remove("bg-neutral-800", "text-neutral-700");
+                });
+            });
+        });
+    </script>
+
+
+
 
     <!-- Script Toggle -->
     <script>
@@ -323,7 +407,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         color: '#ffffff',
     });
 </script>
-<script>
+<!-- <script>
     const buttons = document.querySelectorAll('.switch-btn');
     const hiddenInput = document.getElementById('kategori_karya');
 
@@ -360,6 +444,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     });
 
-</script>
+</script> -->
 
 </html>

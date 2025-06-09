@@ -116,6 +116,12 @@ $admin_name = $_SESSION['admin_name'];
           </a>
         </li>
         <li class="--set-active-profile-html">
+          <a href="lomba.php">
+            <span class="icon"><i class="mdi mdi-folder"></i></span>
+            <span class="menu-item-label">Data Peserta Lomba</span>
+          </a>
+        </li>
+        <li class="--set-active-profile-html">
           <a href="dataqna.php">
             <span class="icon"><i class="mdi mdi-folder"></i></span>
             <span class="menu-item-label">Q and A</span>
