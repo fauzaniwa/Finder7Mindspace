@@ -195,150 +195,133 @@ mysqli_close($koneksi);
 
 </head>
 
-<body class="bg-black items-center">
+<body>
   <?php require '_navbar.php'; ?>
 
-  <div id="profile" style="" class="flex flex-col items-center gap-4 py-10 max-w-full bg-cover">
-    <div class="flex items-start w-[90%] pt-24 ">
-      <a href="homepage.php" class="">
-        <img src="./img/arrow-left 1.svg" alt="Back" />
-      </a>
-    </div>
-  </div>
-
-  <section class="flex flex-col sm:flex-row w-11/12 mx-auto gap-8">
-
-    <div class="flex flex-col w-full sm:w-2/3 gap-8">
-
-      <!-- Profile Section -->
-
-      <div class="flex gap-10 w-full justify-start items-center bg-neutral-900 py-24 px-16 rounded-3xl">
-        <div style="background-image: url(./img/profill.png)" class="w-32 sm:w-64 aspect-square bg-cover rounded-full bg-slate-300 overflow-hidden">
-        </div>
-        <div class="flex flex-col gap-4">
-          <h1 class="text-white text-lg sm:text-3xl font-semibold font-work w-full ">
-            <?php echo htmlspecialchars($_SESSION['user_data']['nama']); ?>
-          </h1>
-          <h2 class="text-white text-base sm:text-2xl font-light font-work w-full ">
-            <?php echo htmlspecialchars($_SESSION['user_data']['instansi']); ?>
-          </h2>
-        </div>
-      </div>
-
-      <!-- <section id="" style="background-image: url(./img/bghero.png)" class="flex flex-col items-center py-10 max-w-full bg-cover">
-              <a href="homepage.html" target="_blank" class="w-[90%] flex items-start"
-              ><div><img src="./img/arrow-left 1.svg" alt="" /></div
-              ></a>
-              <div class="flex flex-col gap- w-full items-center">
-                <div style="background-image: url(./img/profill.png)" class="w-32 h-32 bg-cover rounded-full bg-slate-300"></div>
-                <h1 class="text-white text-2xl md:text-3xl font-semibold font-work w-full text-center">Javier Ramadhan</h1>
-                <h2 class="text-white text-xl md:text-2xl font-light font-work w-full text-center">Universitas Pendidikan Indonesia</h2>
-              </div>
-            </section> -->
-
-
-
-      <!-- Tiket seminar dan workshop Section -->
-      <div id="tiket" class="w-full bg-[#0D0D0D] flex flex-col gap-8 py-32 rounded-3xl" >
-        <h1 class="text-white text-2xl md:text-4xl font-bold font-work w-full text-center">Tiket Seminar dan
-          Workshop</h1>
-
-        <!-- Loop untuk menampilkan setiap tiket -->
-        <?php foreach ($tiket_data as $tiket): ?>
-          <div
-            class="flex gap-5 md:justify-between px-8 py-6 rounded-xl max-md:flex-wrap max-md:px-5 w-[90%] mx-auto bg-gradient-to-r from-[#121212] to-[#1A1A1A]">
-            <div
-              class="flex flex-col mx-auto md:mx-0 text-center md:items-start gap-2 my-auto text-3xl font-medium md:text-start text-white">
-              <div class="text-white text-2xl md:text-3xl font-semibold font-work">
-                <?php echo htmlspecialchars($tiket['judul_event']); ?>
-              </div>
-              <div class="text-white text-lg md:text-xl font-semibold font-works">By
-                <?php echo htmlspecialchars($tiket['speakers_event']); ?>
-              </div>
-              <div class="text-white text-lg md:text-xl font-semibold font-works">
-                Date: <?php echo htmlspecialchars($tiket['jadwal_event']); ?>
-              </div>
-              <div class="text-white text-lg md:text-xl font-semibold font-works">
-                Time: <?php echo htmlspecialchars($tiket['waktu_event']); ?>
-              </div>
-              <div class="text-white text-lg md:text-xl font-semibold font-works">
-                Location: <?php echo htmlspecialchars($tiket['lokasi_event']); ?>
-              </div>
-              <div class="text-white text-lg md:text-xl font-semibold font-works"> Ticket Code :
-                <?php echo htmlspecialchars($tiket['tiket_code']); ?>
-              </div>
-              <a href="<?php echo htmlspecialchars($tiket['link_grup']); ?>" target="_blank"
-                style="font-family: 'Work Sans'"
-                class="border-[1px] hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">
-                Group WhatsApp
-              </a>
-            </div>
-            <div
-              class="mx-auto md:mx-0 flex flex-col justify-center items-center bg-white max-w-[500px] max-h-[500px] rounded-xl">
-              <div id="qr-code-<?php echo $tiket['tiket_code']; ?>" class="qr-code-container">
-                <!-- QR Code akan di-generate menggunakan JavaScript -->
-              </div>
-            </div>
-          </div>
-
-
-          <!-- JavaScript untuk menghasilkan QR Code -->
-          <script>
-            // Ambil nilai tiket_code dari PHP untuk tiket ini
-            var tiketCode<?php echo $tiket['tiket_code']; ?> = "<?php echo htmlspecialchars($tiket['tiket_code']); ?>";
-
-            // Buat QR Code menggunakan data URI
-            var qrCodeUrl<?php echo $tiket['tiket_code']; ?> = "https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + encodeURIComponent(tiketCode<?php echo $tiket['tiket_code']; ?>);
-
-            // Tampilkan QR Code di dalam div yang sesuai
-            document.getElementById('qr-code-<?php echo $tiket['tiket_code']; ?>').innerHTML = '<img src="' + qrCodeUrl<?php echo $tiket['tiket_code']; ?> + '" alt="QR Code">';
-          </script>
-        <?php endforeach; ?>
-
-        <!-- Akhir Loop Tiket -->
-      </div>
-    </div>
-
-    <!-- Tiket Section -->
-    <div id="tiket" class="w-full sm:w-1/3 bg-[#0D0D0D] flex flex-col gap-8 py-32 rounded-3xl">
-      <h1 class="text-white text-2xl md:text-4xl font-bold font-work w-full text-center">Tiket Masuk Finder
+  <!-- Profile Section -->
+  <section id="profile" style="background-image: url(./img/bghero.png)"
+    class="flex flex-col items-center gap-4 py-10 max-w-full bg-cover">
+    <a href="homepage.php" class="w-[90%] flex items-start">
+      <div><img src="./img/arrow-left 1.svg" alt="Back" /></div>
+    </a>
+    <div class="flex flex-col gap- w-full items-center">
+      <div style="background-image: url(./img/profill.png)" class="w-32 h-32 bg-cover rounded-full bg-slate-300"></div>
+      <h1 class="text-white text-2xl md:text-3xl font-semibold font-work w-full text-center">
+        <?php echo htmlspecialchars($_SESSION['user_data']['nama']); ?>
       </h1>
+      <h2 class="text-white text-xl md:text-2xl font-light font-work w-full text-center">
+        <?php echo htmlspecialchars($_SESSION['user_data']['instansi']); ?>
+      </h2>
+    </div>
+  </section>
 
-      <!-- Loop untuk menampilkan setiap tiket -->
+  <!-- <section id="" style="background-image: url(./img/bghero.png)" class="flex flex-col items-center py-10 max-w-full bg-cover">
+      <a href="homepage.html" target="_blank" class="w-[90%] flex items-start"
+        ><div><img src="./img/arrow-left 1.svg" alt="" /></div
+      ></a>
+      <div class="flex flex-col gap- w-full items-center">
+        <div style="background-image: url(./img/profill.png)" class="w-32 h-32 bg-cover rounded-full bg-slate-300"></div>
+        <h1 class="text-white text-2xl md:text-3xl font-semibold font-work w-full text-center">Javier Ramadhan</h1>
+        <h2 class="text-white text-xl md:text-2xl font-light font-work w-full text-center">Universitas Pendidikan Indonesia</h2>
+      </div>
+    </section> -->
 
-      <div class="flex flex-col gap-5 md:justify-center items-center px-8 py-8 rounded-xl max-md:flex-wrap max-md:px-5 w-full mx-auto">
-        <div class="mx-auto md:mx-0 flex flex-col justify-center items-center bg-white max-w-[500px] max-h-[500px] rounded-xl">
-          <div id="qr-codee-<?php echo $_SESSION['user_data']['kode_account']; ?>" class="qr-code-container">
+  <!-- Tiket Section -->
+  <section id="tiket" class="max-w-full bg-[#0D0D0D] flex flex-col gap-8 mt-[-10px]">
+    <h1 class="text-white text-2xl md:text-3xl font-semibold font-work w-full text-center mt-8">Tiket Masuk Finder</h1>
+
+    <!-- Loop untuk menampilkan setiap tiket -->
+
+    <div
+      class="flex gap-5 md:justify-between px-8 py-6 rounded-xl max-md:flex-wrap max-md:px-5 w-[90%] mx-auto bg-gradient-to-r from-[#121212] to-[#1A1A1A]">
+      <div
+        class="flex flex-col mx-auto md:mx-0 text-center md:items-start gap-2 my-auto text-3xl font-medium md:text-start text-white">
+        <div class="text-white text-2xl md:text-3xl font-semibold font-work">
+          Akses Masuk
+        </div>
+        <div class="text-white text-lg md:text-xl font-italic font-works">
+          Tunjukkan tiket ini kepada panitia disaat kamu memasuki area Finder 6 Pusaka
+        </div>
+        <div class="text-white text-lg md:text-xl font-semibold font-works">
+          Ticket Code: <?php echo htmlspecialchars($_SESSION['user_data']['kode_account']); ?>
+        </div>
+      </div>
+      <div class="mx-auto md:mx-0 flex flex-col justify-center items-center bg-white w-[250px] h-[250px] rounded-xl">
+        <div id="qr-codee-<?php echo $_SESSION['user_data']['kode_account']; ?>" class="qr-code-container">
+          <!-- QR Code akan di-generate menggunakan JavaScript -->
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      // Ambil nilai kode_account dari PHP untuk tiket ini
+      var kodeAccount = "<?php echo htmlspecialchars($_SESSION['user_data']['kode_account']); ?>";
+
+      // Buat QR Code menggunakan data URI
+      var qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" + encodeURIComponent(kodeAccount);
+
+      // Tampilkan QR Code di dalam div yang sesuai
+      document.getElementById('qr-codee-<?php echo $_SESSION['user_data']['kode_account']; ?>').innerHTML = '<img src="' + qrCodeUrl + '" alt="QR Code">';
+    </script>
+
+    <!-- JavaScript untuk menghasilkan QR Code -->
+    <script>
+      // Ambil nilai tiket_code dari PHP untuk tiket ini
+      var tiketCode<?php echo $tiket['tiket_code']; ?> = "<?php echo htmlspecialchars($tiket['tiket_code']); ?>";
+
+      // Buat QR Code menggunakan data URI
+      var qrCodeUrl<?php echo $tiket['tiket_code']; ?> = "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" + encodeURIComponent(tiketCode<?php echo $tiket['tiket_code']; ?>);
+
+      // Tampilkan QR Code di dalam div yang sesuai
+      document.getElementById('qr-code-<?php echo $tiket['tiket_code']; ?>').innerHTML = '<img src="' + qrCodeUrl<?php echo $tiket['tiket_code']; ?> + '" alt="QR Code">';
+    </script>
+
+
+    <!-- Akhir Loop Tiket -->
+  </section>
+
+  <!-- Tiket seminar dan workshop Section -->
+  <section id="tiket" class="max-w-full bg-[#0D0D0D] flex flex-col gap-8 mt-[-10px]">
+    <h1 class="text-white text-2xl md:text-3xl font-semibold font-work w-full text-center mt-8">Tiket Seminar dan
+      Workshop</h1>
+
+    <!-- Loop untuk menampilkan setiap tiket -->
+    <?php foreach ($tiket_data as $tiket): ?>
+      <div
+        class="flex gap-5 md:justify-between px-8 py-6 rounded-xl max-md:flex-wrap max-md:px-5 w-[90%] mx-auto bg-gradient-to-r from-[#121212] to-[#1A1A1A]">
+        <div
+          class="flex flex-col mx-auto md:mx-0 text-center md:items-start gap-2 my-auto text-3xl font-medium md:text-start text-white">
+          <div class="text-white text-2xl md:text-3xl font-semibold font-work">
+            <?php echo htmlspecialchars($tiket['judul_event']); ?>
+          </div>
+          <div class="text-white text-lg md:text-xl font-semibold font-works">By
+            <?php echo htmlspecialchars($tiket['speakers_event']); ?>
+          </div>
+          <div class="text-white text-lg md:text-xl font-semibold font-works">
+            Date: <?php echo htmlspecialchars($tiket['jadwal_event']); ?>
+          </div>
+          <div class="text-white text-lg md:text-xl font-semibold font-works">
+            Time: <?php echo htmlspecialchars($tiket['waktu_event']); ?>
+          </div>
+          <div class="text-white text-lg md:text-xl font-semibold font-works">
+            Location: <?php echo htmlspecialchars($tiket['lokasi_event']); ?>
+          </div>
+          <div class="text-white text-lg md:text-xl font-semibold font-works"> Ticket Code :
+            <?php echo htmlspecialchars($tiket['tiket_code']); ?>
+          </div>
+          <a href="<?php echo htmlspecialchars($tiket['link_grup']); ?>" target="_blank" style="font-family: 'Work Sans'"
+            class="border-[1px] hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">
+            Group WhatsApp
+          </a>
+        </div>
+        <div class="mx-auto md:mx-0 flex flex-col justify-center items-center bg-white w-[250px] h-[250px] rounded-xl">
+          <div id="qr-code-<?php echo $tiket['tiket_code']; ?>" class="qr-code-container">
             <!-- QR Code akan di-generate menggunakan JavaScript -->
           </div>
         </div>
-        <hr>
-        <hr>
-        <div
-          class="flex flex-col mx-auto md:mx-0 text-center md:items-center gap-4 my-auto text-3xl font-medium md:text-center text-white w-5/6">
-          <div class="text-white text-2xl md:text-3xl font-bold font-work">
-            Akses Masuk
-          </div>
-          <div class="text-white text-lg md:text-xl font-semibold font-works italic">
-            Ticket Code: <?php echo htmlspecialchars($_SESSION['user_data']['kode_account']); ?>
-          </div>
-          <div class="text-white text-base md:text-lg font-light font-works">
-            Tunjukkan tiket ini kepada panitia disaat kamu memasuki area Finder 6 Pusaka
-          </div>
-        </div>
       </div>
 
-
-      <script>
-        // Ambil nilai kode_account dari PHP untuk tiket ini
-        var kodeAccount = "<?php echo htmlspecialchars($_SESSION['user_data']['kode_account']); ?>";
-
-        // Buat QR Code menggunakan data URI
-        var qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + encodeURIComponent(kodeAccount);
-
-        // Tampilkan QR Code di dalam div yang sesuai
-        document.getElementById('qr-codee-<?php echo $_SESSION['user_data']['kode_account']; ?>').innerHTML = '<img src="' + qrCodeUrl + '" alt="QR Code">';
-      </script>
 
       <!-- JavaScript untuk menghasilkan QR Code -->
       <script>
@@ -351,12 +334,10 @@ mysqli_close($koneksi);
         // Tampilkan QR Code di dalam div yang sesuai
         document.getElementById('qr-code-<?php echo $tiket['tiket_code']; ?>').innerHTML = '<img src="' + qrCodeUrl<?php echo $tiket['tiket_code']; ?> + '" alt="QR Code">';
       </script>
+    <?php endforeach; ?>
 
-
-      <!-- Akhir Loop Tiket -->
-    </div>
+    <!-- Akhir Loop Tiket -->
   </section>
-
 
   <?php require '_footer.php'; ?>
 </body>
