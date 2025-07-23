@@ -22,7 +22,7 @@
 
             <!-- Tombol Login -->
              
-            <div class="md:flex items-center hidden gap-4 justify-end opacity-0">
+            <div class="md:flex items-center hidden gap-4 justify-end">
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <!-- Jika sudah login, tampilkan tombol akun dengan dropdown menu -->
                     <div class="relative inline-block text-left">

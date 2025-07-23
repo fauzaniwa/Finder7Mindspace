@@ -117,21 +117,21 @@
 
     <!-- Hero Section -->
     <section class="hero relative min-h-screen px-4  flex items-center justify-center w-full mx-auto overflow-hidden ">
-        <!-- Kiri Atas -->
-        <img src="./img/hero/1.png" alt=""
-            class="hidden sm:block absolute top-0 left-0 -translate-x-1/3 translate-y-1/3 w-1/4 z-10">
+        <!-- Top Left -->
+    <img src="./img/hero/1.png" alt="Ilustrasi karakter dekoratif pojok kiri atas"
+      class="absolute top-0 left-0 w-[clamp(20rem,25vw,32rem)] translate-x-[-35%] translate-y-[30%] sm:translate-x-[-25%] sm:translate-y-[16.66%] animate-pulse" />
 
-        <!-- Kanan Atas -->
-        <img src="./img/hero/3.png" alt=""
-            class="hidden sm:block absolute top-0 right-0 translate-x-1/2 translate-y-1/4 w-1/4 z-10">
+    <!-- Top Right -->
+    <img src="./img/hero/3.png" alt="Ilustrasi karakter dekoratif pojok kanan atas"
+      class="absolute top-0 right-0 w-[clamp(20rem,25vw,32rem)] translate-x-[35%] translate-y-[30%] sm:translate-x-[35%] sm:translate-y-[10%] animate-pulse" />
 
-        <!-- Kiri Bawah -->
-        <img src="./img/hero/2.png" alt=""
-            class="hidden sm:block absolute bottom-0 left-0 -translate-x-1/3 -translate-y-1/8 w-1/4 z-10">
+    <!-- Bottom Left -->
+    <img src="./img/hero/2.png" alt="Ilustrasi karakter dekoratif pojok kiri bawah"
+      class="absolute bottom-0 left-0 w-[clamp(20rem,25vw,40rem)] translate-x-[-35%] sm:translate-x-[-30%] sm:translate-y-[20%] animate-pulse" />
 
-        <!-- Kanan Bawah -->
-        <img src="./img/hero/4.png" alt=""
-            class="hidden sm:block absolute bottom-0 right-0 w-32 md:w-48 lg:w-1/4 translate-x-1/3 -translate-y-1/8 z-10">
+    <!-- Bottom Right -->
+    <img src="./img/hero/4.png" alt="Ilustrasi karakter dekoratif pojok kanan bawah"
+      class="absolute bottom-0 right-0 w-[clamp(20rem,30vw,40rem)] translate-x-[35%] sm:translate-x-[25%] sm:translate-y-[25%] animate-pulse" />
 
         <div class="justify-center flex flex-col items-center p-10 max-w-xl mx-auto py-72 ">
             <div class="countdown flex justify-center gap-2 items-center mb-4">

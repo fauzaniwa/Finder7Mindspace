@@ -826,9 +826,6 @@ mysqli_close($koneksi);
         </button>
       </a>
     </div>
-
-
-
   </section>
 
   <!-- LOmba -->
