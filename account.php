@@ -246,9 +246,9 @@ mysqli_close($koneksi);
         <!-- Loop untuk menampilkan setiap tiket -->
         <?php foreach ($tiket_data as $tiket): ?>
           <div
-            class="flex gap-5 md:justify-between px-8 py-6 rounded-xl max-md:flex-wrap max-md:px-5 w-[90%] mx-auto bg-gradient-to-r from-[#121212] to-[#1A1A1A]">
+            class="flex gap-5 md:justify-between items-center px-8 py-6 rounded-xl max-md:flex-wrap max-md:px-5 w-[90%] mx-auto bg-gradient-to-r from-[#121212] to-[#1A1A1A]">
             <div
-              class="flex flex-col mx-auto md:mx-0 text-center md:items-start gap-2 my-auto text-3xl font-medium md:text-start text-white">
+              class="flex flex-col w-2/3 mx-auto md:mx-0 text-center md:items-start gap-2 my-auto text-3xl font-medium md:text-start text-white">
               <div class="text-white text-2xl md:text-3xl font-semibold font-work">
                 <?php echo htmlspecialchars($tiket['judul_event']); ?>
               </div>
@@ -274,7 +274,7 @@ mysqli_close($koneksi);
               </a>
             </div>
             <div
-              class="mx-auto md:mx-0 flex flex-col justify-center items-center bg-white max-w-[500px] max-h-[500px] rounded-xl">
+              class="mx-auto md:mx-0 flex flex-col justify-center items-center max-w-[250px] max-h-[250px] rounded-xl">
               <div id="qr-code-<?php echo $tiket['tiket_code']; ?>" class="qr-code-container">
                 <!-- QR Code akan di-generate menggunakan JavaScript -->
               </div>
