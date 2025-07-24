@@ -299,31 +299,15 @@ mysqli_close($koneksi);
 
   <!-- Hero Section -->
   <section data-section-bg="dark" class="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
-    <!-- Top Left -->
-    <img src="./img/hero/1.png" alt="Ilustrasi karakter dekoratif pojok kiri atas"
-      class="absolute top-0 left-0 w-[clamp(20rem,25vw,32rem)] translate-x-[-35%] translate-y-[30%] sm:translate-x-[-25%] sm:translate-y-[16.66%] animate-pulse" />
-
-    <!-- Top Right -->
-    <img src="./img/hero/3.png" alt="Ilustrasi karakter dekoratif pojok kanan atas"
-      class="absolute top-0 right-0 w-[clamp(20rem,25vw,32rem)] translate-x-[35%] translate-y-[30%] sm:translate-x-[35%] sm:translate-y-[10%] animate-pulse" />
-
-    <!-- Bottom Left -->
-    <img src="./img/hero/2.png" alt="Ilustrasi karakter dekoratif pojok kiri bawah"
-      class="absolute bottom-0 left-0 w-[clamp(20rem,25vw,40rem)] translate-x-[-35%] sm:translate-x-[-30%] sm:translate-y-[20%] animate-pulse" />
-
-    <!-- Bottom Right -->
-    <img src="./img/hero/4.png" alt="Ilustrasi karakter dekoratif pojok kanan bawah"
-      class="absolute bottom-0 right-0 w-[clamp(20rem,30vw,40rem)] translate-x-[35%] sm:translate-x-[25%] sm:translate-y-[25%] animate-pulse" />
-
     <!-- Central Content -->
     <div class="relative z-10 max-w-md text-center text-white space-y-4">
-      <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold">
-        Coming Soon<br />Finder 7 Mindspace
+      <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-left">
+        Welcome <br />Finder 7 Mindspace
       </h1>
-      <p class="text-base sm:text-xl text-gray-300">
+      <p class="text-base sm:text-xl text-gray-300 text-left">
         think the unthinkable
       </p>
-      <div class="flex flex-col gap-4 items-center">
+      <div class="flex flex-col gap-4 items-left">
         <a href="https://www.instagram.com/finder_dkv/"
           class="w-48 sm:w-64 h-12 sm:h-16 flex items-center justify-center bg-[#008C62] text-white text-lg sm:text-xl font-medium rounded-xl sm:rounded-[20px] shadow-md hover:scale-105 transition-transform duration-300">
           Instagram
@@ -333,6 +317,10 @@ mysqli_close($koneksi);
           See More
         </a>
       </div>
+    </div>
+    <!-- Right Image -->
+    <div class="mb-8 md:mb-0 flex justify-center">
+      <img src="./img/hero/char.png" alt="Mindspace Characters" class="max-w-xs sm:max-w-md md:max-w-full h-auto" />
     </div>
   </section>
 
@@ -432,24 +420,14 @@ mysqli_close($koneksi);
   <br /><br />
 
 
-  <!-- <section id="jadwal" data-section-bg="light" class="bg-[#FDFDF6] pt-16 pb-24 px-6 rounded-t-3xl">
-    <div class="max-w-4xl mx-auto pt-8 pb-12 px-6">
-      <h2 class="text-center text-4xl font-bold text-neutral-900 mb-8">
-        Jadwal Acara
-      </h2>
-<div class="bg-center bg-cover bg-no-repeat rounded-xl p-8 flex justify-center items-center h-64" style="background-image: url('img/CoomingSoon.png');">
-  <span class="bg-white text-xs uppercase px-4 py-2 rounded-full shadow">
-    Coming Soon
-  </span>
-</div>
-    </div>
-  </section> -->
+
 
   <!-- Jadwal -->
-  <section id="jadwal" class="container flex flex-col max-w-full bg-[#0D0D0D] gap-4 py-10 pt-28">
-    <!-- H1 -->
-    <h1 style="font-family: 'Work Sans'" class="text-white px-6 md:px-16 text-2xl md:text-3xl md:mx-auto">Jadwal Acara
-    </h1>
+  <section id="jadwal" class="container flex flex-col max-w-full bg-[#FDFDF6] pt-16 pb-24 px-6 rounded-t-3xl">
+    <!-- H2 -->
+    <h2 class="text-center text-4xl font-bold text-neutral-900 mb-8">
+        Jadwal Acara
+      </h2>
 
     <!-- Filter Jadwal -->
     <div class="flex flex-row gap-2  mx-auto justify-start max-w-[90%] overflow-x-auto snap-x">
@@ -473,7 +451,7 @@ mysqli_close($koneksi);
           $activeClass = isset($_GET['filter']) && $_GET['filter'] === urlencode($jadwal_event) ? 'active' : '';
 
           // Tampilkan link filter dengan format tanggal yang diinginkan
-          echo '<a href="?filter=' . urlencode($jadwal_event) . '#jadwal" class="filter-button py-2 px-3 text-white rounded-full hover:bg-white hover:bg-opacity-25 text-base flex flex-shrink-0 ' . $activeClass . '">' . htmlspecialchars($formatted_date) . '</a>';
+          echo '<a href="?filter=' . urlencode($jadwal_event) . '#jadwal" class="filter-button py-2 px-3 text-black rounded-full hover:bg-white hover:bg-opacity-25 text-base flex flex-shrink-0 ' . $activeClass . '">' . htmlspecialchars($formatted_date) . '</a>';
         }
         ?>
       </div>
@@ -515,22 +493,22 @@ mysqli_close($koneksi);
         // Tampilkan event
         ?>
         <div
-          class="flex flex-col lg:flex-row lg:justify-between mx-6 md:mx-16 border-b-[1px] border-b-white py-4 gap-6 lg:items-center">
+          class="flex flex-col lg:flex-row lg:justify-between mx-6 md:mx-16 border-b-[1px] border-b-black py-4 gap-6 lg:items-center">
           <!-- Flex-Kiri -->
           <div class="flex flex-col gap-4 lg:gap-2 w-full">
             <div class="flex flex-wrap lg:flex-row gap-2 md:gap-4 ">
-              <h1 style="font-family: 'Work Sans'" class="text-white text-lg md:text-xl font-normal">
+              <h1 style="font-family: 'Work Sans'" class="text-black text-lg md:text-xl font-normal">
                 <?php echo $event['waktu_event']; ?>
               </h1>
-              <li style="font-family: 'Work Sans'" class="text-white text-lg md:text-xl font-normal">Kuota :
+              <li style="font-family: 'Work Sans'" class="text-black text-lg md:text-xl font-normal">Kuota :
                 <?php echo $event['kuota']; ?>
               </li>
             </div>
             <div class="flex flex-col gap-2">
-              <h1 style="font-family: 'Work Sans'" class="text-white text-2xl lg:text-3xl font-medium">
+              <h1 style="font-family: 'Work Sans'" class="text-black text-2xl lg:text-3xl font-medium">
                 <?php echo $event['judul_event']; ?>
               </h1>
-              <h1 style="font-family: 'Work Sans'" class="text-white md:text-lg font-light">By
+              <h1 style="font-family: 'Work Sans'" class="text-black md:text-lg font-light">By
                 <?php echo $event['speakers_event']; ?>
               </h1>
             </div>
@@ -540,7 +518,7 @@ mysqli_close($koneksi);
           <div class="flex flex-col w-full md:max-w-[280px] items-start lg:items-center gap-4">
             <a href="detailevent.php?id_event=<?php echo $event['id_event']; ?>">
               <button style="font-family: 'Work Sans'"
-                class="w-[275px] h-fit border-[1px] hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full md:text-lg">
+                class="w-[275px] h-fit border-[1px] hover:bg-black hover:bg-opacity-25 py-2 px-6 border-black text-black rounded-full md:text-lg">
                 Lihat Detail
               </button>
             </a>
@@ -555,25 +533,25 @@ mysqli_close($koneksi);
                   <form method="post">
                     <input type="hidden" name="id_event" value="<?php echo $event['id_event']; ?>">
                     <button style="font-family: 'Work Sans'"
-                      class="w-[275px] h-fit border-[1px] bg-white hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white hover:text-white rounded-full md:text-lg text-black">
+                      class="w-[275px] h-fit border-[1px] bg-emerald-400 hover:bg-black hover:bg-opacity-70 py-2 px-6 border-white hover:text-white rounded-full md:text-lg text-black">
                       Dapatkan Tiket
                     </button>
                   </form>
                 <?php else: // Jika kuota habis ?>
                   <button style="font-family: 'Work Sans'"
-                    class="w-[275px] h-fit border-[1px] bg-white hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white hover:text-white rounded-full md:text-lg text-black"
+                    class="w-[275px] h-fit border-[1px] bg-emerald-400 hover:bg-black hover:bg-opacity-25 py-2 px-6 border-white hover:text-white rounded-full md:text-lg text-black"
                     disabled>
                     Tiket telah habis
                   </button>
                 <?php endif; ?>
               <?php elseif ($event['event_status'] == 2): // Status event belum dimulai ?>
                 <button style="font-family: 'Work Sans'"
-                  class="w-[275px] h-fit border-[1px] bg-white hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white hover:text-white rounded-full md:text-lg text-black"
+                  class="w-[275px] h-fit border-[1px] bg-emerald-400 hover:bg-black hover:bg-opacity-25 py-2 px-6 border-white hover:text-white rounded-full md:text-lg text-black"
                   disabled>Pendaftaran Belum Dibuka
                 </button>
               <?php else: // Jika event sudah berakhir ?>
                 <button style="font-family: 'Work Sans'"
-                  class="w-[275px] h-fit border-[1px] bg-white hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white hover:text-white rounded-full md:text-lg text-black"
+                  class="w-[275px] h-fit border-[1px] bg-emerald-400 hover:bg-black hover:bg-opacity-25 py-2 px-6 border-white hover:text-white rounded-full md:text-lg text-black"
                   disabled>Event Sudah Berakhir
                 </button>
               <?php endif; ?>
