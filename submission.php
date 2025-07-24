@@ -134,7 +134,9 @@
       class="absolute bottom-0 right-0 w-[clamp(20rem,30vw,40rem)] translate-x-[35%] sm:translate-x-[25%] sm:translate-y-[25%] animate-pulse" />
 
         <div class="justify-center flex flex-col items-center p-10 max-w-xl mx-auto py-72 ">
-            <div class="countdown flex justify-center gap-2 items-center mb-4">
+
+
+            <!-- <div class="countdown flex justify-center gap-2 items-center mb-4">
                 <div class="flex flex-col items-center justify-center">
                     <div class="flex flex-row gap-2">
                         <div
@@ -170,16 +172,17 @@
                     </div>
                     <div class="text-white justify-center items-center italic mt-2 text-sm md:text-base">Minutes</div>
                 </div>
-            </div>
+            </div> -->
+
+            
             <br><br>
-            <h1 class="text-white text-3xl md:text-5xl font-semibold text-center"> Ayo Submit Karyamu !</h1>
+            <h3 class="text-white text-base md:text-2xl italic mb-5 text-center"> Terimakasih atas partisipasi anda</h3>
+            <h1 class="text-white text-3xl md:text-5xl font-semibold text-center"> D-Day Pengumuman Lomba!</h1>
             <br>
-            <h3 class="text-white text-base md:text-2xl italic mb-5 text-center"> Jangan lupa baca syarat dan
-                ketentuannya dulu ya!</h3>
-            <a href="#deskripsi">
+            <h3 class="text-white text-base md:text-2xl italic mb-5 text-center"> Ayo tekan tombol di bawah ini!</h3>
+            <a href="pengumuman_lomba.php">
                 <button
-                    class="submit-btn  bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white  ">See
-                    More</button>
+                    class="submit-btn  bg-emerald-600 hover:bg-emerald-800 transition-all duration-300 ease-in-out px-10 py-3 md:px-20 md:py-5 rounded-2xl md:rounded-3xl mt-6 text-base md:text-xl text-white  ">Lihat Pemenang</button>
             </a>
         </div>
     </section>
