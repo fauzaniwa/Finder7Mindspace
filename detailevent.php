@@ -311,118 +311,159 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id_event'])) {
     }
     // Menampilkan detail event
     ?>
-    <section id="" class="w-full h-full pt-32 bg-[#0D0D0D] pb-32">
-        <div
-            class="flex flex-col lg:flex-row lg:justify-between w-[90%] mx-auto bg-[#131313] py-4 gap-6 lg:items-center px-4 rounded-xl">
-            <div class="flex flex-col gap-4 lg:gap-2 w-full order-last lg:order-first">
-                <div class="flex flex-wrap lg:flex-row gap-2 md:gap-4">
-                    <h1 style="font-family: 'Work Sans'" class="text-white text-lg md:text-xl font-normal">
-                        <?php echo htmlspecialchars($row_event['waktu_event']); ?>
-                    </h1>
-                    <li style="font-family: 'Work Sans'" class="text-white text-lg md:text-xl font-normal">
+    <section class="w-full min-h-screen pt-32 pb-32 bg-[#0D0D0D] font-work">
+  <!-- Container -->
+  <div class="w-[90%] mx-auto flex flex-col lg:flex-row gap-10 lg:items-center bg-[#131313] p-6 rounded-xl">
 
-                        <?php // Menampilkan sisa kuota untuk id_event tertentu
-                        if (array_key_exists($id_event_target, $events_data)) {
-                            $sisa_kuota = $events_data[$id_event_target]['sisa_kuota'];
-                            echo htmlspecialchars($sisa_kuota) . " Tiket Tersedia";
-                        } else {
-                            echo "Event tidak ditemukan.";
-                        }
-                        ?>
+    <!-- Gambar: tampil atas di mobile, kanan di desktop -->
+    <div class="order-first lg:order-last w-full lg:w-1/2 flex justify-center">
+      <div class="relative bg-[#D9D9D9] rounded-2xl w-full max-w-[650px] aspect-square overflow-hidden">
+        <img src="./img/event/<?php echo htmlspecialchars($row_event['thumbnail_event']); ?>"
+             class="object-cover w-full h-full rounded-2xl">
+        <!-- Dekorasi PNG kiri atas -->
+    <img src="./img/dekorasi/atas.png"
+         class="absolute -top-4 -left-4 z-10 opacity-35" alt="Dekorasi Kiri">
 
+    <!-- Dekorasi PNG kanan bawah -->
+    <img src="./img/dekorasi/bawah.png"
+         class="absolute -bottom-4 -right-4 z-10 opacity-35" alt="Dekorasi Kanan">
+      </div>
+    </div>
 
-                    </li>
-                    <li style="font-family: 'Work Sans'" class="text-white text-lg md:text-xl font-normal">
-                        <?php echo htmlspecialchars($row_event['lokasi_event']); ?>
-                    </li>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h1 style="font-family: 'Work Sans'" class="text-white text-2xl lg:text-3xl font-medium">
-                        <?php echo htmlspecialchars($row_event['judul_event']); ?>
-                    </h1>
-                    <h1 style="font-family: 'Work Sans'" class="text-white md:text-xl font-light">
-                        <?php echo htmlspecialchars($row_event['speakers_event']); ?>
-                    </h1>
-                </div>
-            </div>
-            <img src="img/event/<?php echo htmlspecialchars($row_event['thumbnail_event']); ?>"
-                class="order-first lg:order-last shrink-0 bg-cover h-full bg-white max-h-[350px] max-w-[350px]">
+    <!-- Konten Kiri -->
+    <div class="order-last lg:order-first w-full lg:w-1/2 space-y-5">
+      <!-- Breadcrumb -->
+      <p class="text-sm text-white/70">Homepage / Jadwal / <span class="text-yellow-400 italic">Detail Acara</span></p>
+
+      <!-- Judul -->
+      <h1 class="text-white text-3xl md:text-4xl font-semibold leading-snug">
+        <?php echo htmlspecialchars($row_event['judul_event']); ?>
+      </h1>
+
+      <!-- Pembicara -->
+      <p class="text-white italic text-lg">
+        <?php echo htmlspecialchars($row_event['speakers_event']); ?>
+      </p>
+
+      <!-- Info Waktu & Lokasi -->
+      <div class="space-y-2 text-white">
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+               d="M8 7V3m8 4V3m-9 8h10m-11 8h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>
+          <span><?php echo htmlspecialchars($row_event['waktu_event']); ?> | 09:00–12:00</span>
         </div>
-
-        <section class="flex gap-5 justify-between w-[90%] lg-w-[60%] mx-auto my-4">
-            <h2 class="text-white text-2xl md:text-3xl font-semibold font-work text-center">Deskripsi Acara</h2>
-            <div class="flex gap-3 px-5"></div>
-        </section>
-        <p class="w-[90%] mx-auto text-white text-lg md:text-xl font-light font-work text-justify mb-4">
-            <span class="font-reguler"><?php echo htmlspecialchars($row_event['deskripsi_event']); ?></span>
-        </p>
-
-        <section class="section main-section">
-            <!-- Tombol -->
-            <div
-                class="flex w-full items-center bg-[#131313] fixed bottom-0 drop-shadow-lg border-t-[1px] border-[#202020]">
-                <div class="w-full flex justify-center">
-                    <?php if (!$user_id || !in_array($row_event['id_event'], $events_with_tickets)): ?>
-                        <?php if ($row_event['event_status'] == 1): // Pengecekan status event ?>
-                            <?php
-                            // Mengambil sisa kuota untuk id_event tertentu
-                            if (array_key_exists($id_event_target, $events_data)) {
-                                $sisa_kuota = $events_data[$id_event_target]['sisa_kuota'];
-                            } else {
-                                $sisa_kuota = 0; // Atau tentukan nilai default jika event tidak ditemukan
-                            }
-                            ?>
-                            <?php if ($sisa_kuota > 0): // Cek sisa kuota ?>
-                                <form method="post" action=""> <!-- Ganti dengan aksi yang sesuai -->
-                                    <input type="hidden" name="id_event"
-                                        value="<?php echo htmlspecialchars($row_event['id_event']); ?>">
-                                    <button type="submit" style="font-family: 'Work Sans'"
-                                        class="w-[350px] max-w-[600px] flex justify-center items-center h-fit border-[1px] font-work hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full text-lg md:text-2xl my-4">
-                                        Dapatkan Tiket
-                                    </button>
-                                </form>
-                            <?php else: // Jika sisa kuota = 0 ?>
-                                <button style="font-family: 'Work Sans'"
-                                    class="w-[350px] max-w-[600px] flex justify-center items-center h-fit border-[1px] font-work hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full text-lg md:text-2xl my-4"
-                                    disabled>
-                                    Tiket telah habis
-                                </button>
-                            <?php endif; ?>
-                        <?php elseif ($row_event['event_status'] == 2): // Status event belum dimulai ?>
-                            <button style="font-family: 'Work Sans'"
-                                class="w-[350px] max-w-[600px] flex justify-center items-center h-fit border-[1px] font-work hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full text-lg md:text-2xl my-4"
-                                disabled>
-                                Pendaftaran Belum Dibuka
-                            </button>
-                        <?php else: // Status event sudah berakhir ?>
-                            <button style="font-family: 'Work Sans'"
-                                class="w-[350px] max-w-[600px] flex justify-center items-center h-fit border-[1px] font-work hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full text-lg md:text-2xl my-4"
-                                disabled>
-                                Event Sudah Berakhir
-                            </button>
-                        <?php endif; ?>
-                    <?php else: // Jika user sudah memiliki tiket ?>
-                        <div>
-                            <p style="font-family: 'Work Sans'"
-                                class="w-[350px] max-w-[600px] flex justify-center items-center h-fit border-[1px] font-work hover:bg-white hover:bg-opacity-25 py-2 px-6 border-white text-white rounded-full text-lg md:text-2xl my-4">
-                                Kamu sudah memiliki tiket.
-                            </p>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </div>
-
-
-
-        </section>
-
-
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+               d="M17.657 16.657L13.414 12.414a4 4 0 1 0-1.414 1.414l4.243 4.243a1 1 0 0 0 1.414-1.414z"/>
+               <path stroke-linecap="round" stroke-linejoin="round"
+               d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
+          <span><?php echo htmlspecialchars($row_event['lokasi_event']); ?></span>
+        </div>
+        <div>
+          <?php
+            if (array_key_exists($id_event_target, $events_data)) {
+              echo "<span>" . htmlspecialchars($events_data[$id_event_target]['sisa_kuota']) . " Tiket Tersedia</span>";
+            } else {
+              echo "<span>Event tidak ditemukan.</span>";
+            }
+          ?>
+        </div>
+      </div>
+      <!-- Deskripsi -->
+  <div>
+    <h2 class="text-white text-2xl md:text-3xl font-semibold text-left mb-4">Deskripsi Acara</h2>
+    <p class="text-white text-lg text-justify font-light">
+      <?php echo htmlspecialchars($row_event['deskripsi_event']); ?>
+    </p>
+  </div>
+  <div class="w-full flex py-4">
+      <?php if (!$user_id || !in_array($row_event['id_event'], $events_with_tickets)): ?>
         <?php
-        // Tutup statement dan koneksi
-        mysqli_stmt_close($stmt_event);
-        mysqli_close($koneksi);
+          $sisa_kuota = array_key_exists($id_event_target, $events_data) ? $events_data[$id_event_target]['sisa_kuota'] : 0;
         ?>
-    </section>
+        <?php if ($row_event['event_status'] == 1 && $sisa_kuota > 0): ?>
+          <form method="post" action="">
+            <input type="hidden" name="id_event" value="<?php echo htmlspecialchars($row_event['id_event']); ?>">
+            <button type="submit"
+              class="bg-[#00E091] hover:bg-[#00c77e] text-black font-semibold px-8 py-3 rounded-full text-lg transition-all">
+              Dapatkan Tiket
+            </button>
+          </form>
+        <?php elseif ($row_event['event_status'] == 2): ?>
+          <button disabled
+            class="bg-[#202020] text-white px-8 py-3 rounded-full text-lg cursor-not-allowed">
+            Pendaftaran Belum Dibuka
+          </button>
+        <?php elseif ($row_event['event_status'] != 1): ?>
+          <button disabled
+            class="bg-[#202020] text-white px-8 py-3 rounded-full text-lg cursor-not-allowed">
+            Event Sudah Berakhir
+          </button>
+        <?php else: ?>
+          <button disabled
+            class="bg-[#202020] text-white px-8 py-3 rounded-full text-lg cursor-not-allowed">
+            Tiket Telah Habis
+          </button>
+        <?php endif; ?>
+      <?php else: ?>
+        <p class="text-[#00E091] font-semibold px-8 py-3 rounded-full text-lg">
+          Kamu sudah memiliki tiket.
+        </p>
+      <?php endif; ?>
+    </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Tombol di bawah -->
+  <!-- <div class="fixed bottom-0 w-full bg-[#131313] border-t border-[#202020] z-50">
+    <div class="w-full flex justify-center py-4">
+      <?php if (!$user_id || !in_array($row_event['id_event'], $events_with_tickets)): ?>
+        <?php
+          $sisa_kuota = array_key_exists($id_event_target, $events_data) ? $events_data[$id_event_target]['sisa_kuota'] : 0;
+        ?>
+        <?php if ($row_event['event_status'] == 1 && $sisa_kuota > 0): ?>
+          <form method="post" action="">
+            <input type="hidden" name="id_event" value="<?php echo htmlspecialchars($row_event['id_event']); ?>">
+            <button type="submit"
+              class="bg-[#00E091] hover:bg-[#00c77e] text-black font-semibold px-8 py-3 rounded-full text-lg transition-all">
+              Dapatkan Tiket
+            </button>
+          </form>
+        <?php elseif ($row_event['event_status'] == 2): ?>
+          <button disabled
+            class="bg-[#202020] text-white px-8 py-3 rounded-full text-lg cursor-not-allowed">
+            Pendaftaran Belum Dibuka
+          </button>
+        <?php elseif ($row_event['event_status'] != 1): ?>
+          <button disabled
+            class="bg-[#202020] text-white px-8 py-3 rounded-full text-lg cursor-not-allowed">
+            Event Sudah Berakhir
+          </button>
+        <?php else: ?>
+          <button disabled
+            class="bg-[#202020] text-white px-8 py-3 rounded-full text-lg cursor-not-allowed">
+            Tiket Telah Habis
+          </button>
+        <?php endif; ?>
+      <?php else: ?>
+        <p class="text-[#00E091] font-semibold px-8 py-3 rounded-full text-lg">
+          Kamu sudah memiliki tiket.
+        </p>
+      <?php endif; ?>
+    </div>
+  </div> -->
+
+  <?php
+  // Tutup koneksi
+  mysqli_stmt_close($stmt_event);
+  mysqli_close($koneksi);
+  ?>
+</section>
+
 
 
 
