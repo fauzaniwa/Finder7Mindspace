@@ -133,7 +133,7 @@
         <img src="./img/Submission/supergraphic4.png" alt="Ilustrasi karakter dekoratif pojok kanan atas"
             class="absolute hidden sm:flex top-0 right-0 w-[clamp(10rem,15vw,16rem)] translate-x-[0%] translate-y-[70%] sm:translate-x-[0%] sm:translate-y-[19.99%] animate-pulse" />
 
-        
+
 
         <div class="justify-center flex flex-col items-center p-10 max-w-xl mx-auto py-72 ">
 
@@ -230,7 +230,7 @@
         <section class="timeline flex flex-col justify-center w-full mx-auto ">
             <h1 class="text-3xl md:text-6xl font-bold text-white text-center mb-16 md:mb-32">Timeline</h1>
             <img src="./img/Submission/Timelinewacom.png" alt="" class="hidden sm:block w-10/12 justify-center mx-auto">
-            <img src="./img/Submission/Timelinewacom.png" alt="" class="block sm:hidden w-full">
+            <img src="./img/Submission/Timelinewacom2.png" alt="" class="block sm:hidden w-10/12 mx-auto">
         </section>
     </div>
     <br><br><br><br><br><br><br><br>
@@ -245,9 +245,11 @@
                     <img src="./img/Submission/juara1wacom.png" alt="" class="w-72 h-auto mx-auto">
                 </div>
                 <div class="flex flex-col">
-                    <h1 class=" mx-auto text-center italic font-semibold text-2xl pt-2 pb-4 max-w-56"> 1x Unit CTL-672 by
+                    <h1 class=" mx-auto text-center italic font-semibold text-2xl pt-2 pb-4 max-w-56"> 1x Unit CTL-672
+                        by
                         Wacom</h1>
-                    <p class="mx-auto max-w-56 text-center font-light text-xl "> sertifikat cetak + merchandise Finder 7</p>
+                    <p class="mx-auto max-w-56 text-center font-light text-xl "> sertifikat cetak + merchandise Finder 7
+                    </p>
                 </div>
             </div>
 
@@ -257,13 +259,15 @@
                 <div class="flex flex-col w-1/2 md:w-full">
                     <h1 class="hidden md:block text-center font-bold text-3xl pb-10">Juara 2</h1>
                     <img src="./img/Submission/juara2wacom.png" alt="" class="w-72 h-auto mx-auto">
-                     <h1 class="block md:hidden text-center font-bold text-2xl pb-3">Juara 2</h1>
+                    <h1 class="block md:hidden text-center font-bold text-2xl pb-3">Juara 2</h1>
                 </div>
-                
+
                 <div class="flex flex-col">
-                    <h1 class=" mx-auto text-center italic font-semibold text-2xl pt-2 pb-4 max-w-56"> 1x Unit CTL-472 by
+                    <h1 class=" mx-auto text-center italic font-semibold text-2xl pt-2 pb-4 max-w-56"> 1x Unit CTL-472
+                        by
                         Wacom</h1>
-                    <p class="mx-auto max-w-56 text-center font-light text-xl "> sertifikat cetak + merchandise Finder 7</p>
+                    <p class="mx-auto max-w-56 text-center font-light text-xl "> sertifikat cetak + merchandise Finder 7
+                    </p>
                 </div>
             </div>
 
@@ -278,7 +282,8 @@
                 <div class="flex flex-col">
                     <h1 class=" mx-auto text-center italic font-semibold text-2xl pt-2 pb-4 max-w-56">Voucher Belanja
                         Rp500.000</h1>
-                    <p class="mx-auto max-w-56 text-center font-light text-xl "> sertifikat cetak + merchandise Finder 7</p>
+                    <p class="mx-auto max-w-56 text-center font-light text-xl "> sertifikat cetak + merchandise Finder 7
+                    </p>
                 </div>
             </div>
 
@@ -412,7 +417,7 @@
     <br><br><br><br><br><br><br>
 
     <!-- Ketentuan Khusus Section -->
-    <h1 class="text-center text-white text-5xl font-bold"> Ketentuan Khusus</h1>
+    <h1 class="text-center text-white text-3xl md:text-5xl font-bold"> Ketentuan Khusus</h1>
     <br><br>
 
     <!-- Header Navigasi -->
@@ -427,76 +432,100 @@
             class="pointer-events-none absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-neutral-950 to-transparent z-10">
         </div>
         <section
-            class="khusus flex overflow-x-auto snap-x snap-mandatory gap-5 md:gap-20 px-7 md:px-24 scrollbar-hide scroll-smooth ">
+            class="khusus flex overflow-x-auto snap-x snap-mandatory gap-5 md:gap-20 px-5 md:px-24 scrollbar-hide scroll-smooth ">
             <div id="desainkarakter"
-                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-10 md:p-24 py-12 md:py-32 bg-neutral-800 text-white ">
+                class="snap-center shrink-0 w-full md:w-10/12 h-fit md:h-auto rounded-3xl p-7 md:p-24 py-12 md:py-32 bg-neutral-800 text-white ">
                 <h1 class="font-bold text-center text-2xl md:text-5xl mb-6 md:mb-10">Babak Penyisihan</h1>
                 <h2 class="font-normal text-center text-lg md:text-2xl mb-6 md:mb-10">Dilaksanakan Secara ONLINE</h2>
                 <hr class="w-10/12 mx-auto">
                 <br><br><br>
-                <div class="grid grid-cols-[150px_auto] md:grid-cols-[200px_auto] lg:grid-cols-[300px_auto] gap-y-12 text-white">
-                    <div class="font-bold text-base md:text-xl ">Judul Buku</div>
-                    <div class="text-sm text-justify">: Di Bulan Aku Menunggu</div>
+                <table class="border-separate border-spacing-y-4 border-spacing-5 text-left text-white">
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Judul Buku</td>
+                        <td class="text-sm text-justify align-top">Di Bulan Aku Menunggu</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Penulis</td>
+                        <td class="text-sm text-justify align-top">Finder 7 Mindspace</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Genre / Kategori</td>
+                        <td class="text-sm text-justify align-top">Fiksi, folklore, romantis, drama.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Target Audiens</td>
+                        <td class="text-sm text-justify align-top">Semua umur, pecinta cerita rakyat.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Sinopsis buku</td>
+                        <td class="text-sm text-justify align-top">Mengadaptasi dari cerita rakyat berjudul Nyai Anteh
+                            Penunggu
+                            Bulan. Dalam Nyai Anteh Penunggu
+                            Bulan, diceritakan bahwa suatu malam, saat bulan bersinar terang, Nyai Anteh duduk di
+                            beranda
+                            rumahnya dan menatap bulan dengan penuh kerinduan kepada sang Kekasih yang merupakan
+                            pangeran
+                            kerajaan. Kisah cinta mereka kandas lantaran Raja tidak mengizinkan Pangeran untuk menikahi
+                            rakyat jelata. Ia berdoa kepada para dewa agar diberikan tempat di mana ia bisa hidup dalam
+                            ketenangan dan jauh dari rasa sakit hatinya. Tiba-tiba, sebuah cahaya terang menyelimutinya,
+                            dan
+                            dalam sekejap, ia terangkat ke langit menuju bulan. Sejak saat itu, Nyai Anteh tinggal di
+                            bulan
+                            bersama kucing kesayangannya, yang selalu menemaninya dalam kesunyian.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Nuansa yang diharapkan</td>
+                        <td class="text-sm text-justify align-top"> Dramatis, lembut, menyentuh, sedikit dark.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Referensi Visual</td>
+                        <td class="text-sm text-justify align-top">https://pin.it/1OzikV3vA</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Elemen Wajib</td>
+                        <td class="text-sm align-top">
+                            <ol class="list-disc list-outside pl-4">
+                                <li>Judul buku</li>
+                                <li>Pencatutan nama Finder 7: Mindspace sebagai penulis</li>
+                                <li>Logo Finder 7: Mindspace dan Wacom Indonesia</li>
+                                <li>Blurb/sinopsis (untuk back cover)</li>
+                                <li>Barcode (untuk back cover, menyusul)</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Warna yang diharapkan</td>
+                        <td class="text-sm text-justify align-top">Kombinasi hangat-dingin, dengan sentuhan romansa yang
+                            menyayat
+                            hati.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Gaya Tipografi</td>
+                        <td class="text-sm text-justify align-top">Handwritten / cursive / dekoratif.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Format & Ukuran</td>
+                        <td class="text-sm text-justify align-top">13 x 19 cm, spine tebal 1,5 cm, margin safe area
+                            kanan-kiri-atas-bawah 1 cm</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top ">Output yang diharapkan</td>
+                        <td class="text-sm text-justify align-top">PDF (CMYK 300dpi)</td>
+                    </tr>
 
 
-                    <div class="font-bold text-base md:text-xl ">Penulis</div>
-                    <div class="text-sm text-justify">: Finder 7: Mindspace</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Genre/Kategori</div>
-                    <div class="text-sm text-justify">: Fiksi, folklore, romantis, drama.</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Target Audiens</div>
-                    <div class="text-sm text-justify">: Semua umur, pecinta cerita rakyat.</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Sinopsis buku</div>
-                    <div class="text-sm text-justify">: Mengadaptasi dari cerita rakyat berjudul Nyai Anteh Penunggu Bulan. Dalam Nyai Anteh Penunggu
-                        Bulan, diceritakan bahwa suatu malam, saat bulan bersinar terang, Nyai Anteh duduk di beranda
-                        rumahnya dan menatap bulan dengan penuh kerinduan kepada sang Kekasih yang merupakan pangeran
-                        kerajaan. Kisah cinta mereka kandas lantaran Raja tidak mengizinkan Pangeran untuk menikahi
-                        rakyat jelata. Ia berdoa kepada para dewa agar diberikan tempat di mana ia bisa hidup dalam
-                        ketenangan dan jauh dari rasa sakit hatinya. Tiba-tiba, sebuah cahaya terang menyelimutinya, dan
-                        dalam sekejap, ia terangkat ke langit menuju bulan. Sejak saat itu, Nyai Anteh tinggal di bulan
-                        bersama kucing kesayangannya, yang selalu menemaninya dalam kesunyian.</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Nuansa yang diharapkan</div>
-                    <div class="text-sm text-justify">: Dramatis, lembut, menyentuh, sedikit dark.</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Referensi Visual</div>
-                    <div class="text-sm text-justify">: https://pin.it/1OzikV3vA</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Elemen Wajib</div>
-                    <div class="text-sm text-justify">
-                        <li>Judul buku</li>
-                        <li>Pencatutan nama Finder 7: Mindspace sebagai penulis</li>
-                        <li>Logo Finder 7: Mindspace dan Wacom Indonesia</li>
-                        <li>Blurb/sinopsis (untuk back cover)</li>
-                        <li>Barcode (untuk back cover, menyusul)</li>
-                    </div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Warna yang diharapkan</div>
-                    <div class="text-sm text-justify">: Kombinasi hangat-dingin, dengan sentuhan romansa yang menyayat hati.</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Gaya Tipografi</div>
-                    <div class="text-sm text-justify">: Handwritten/cursive/dekoratif.</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Format & Ukuran</div>
-                    <div class="text-sm text-justify">: 13 x 19 cm, spine tebal 1,5 cm, margin safe area kanan-kiri-atas-bawah 1 cm</div>
-
-
-                    <div class="font-bold text-base md:text-xl ">Output yang diharapkan</div>
-                    <div class="text-sm text-justify">: PDF (CMYK 300dpi)</div>
-
-
-                </div>
+                </table>
 
             </div>
 
@@ -506,66 +535,97 @@
                 <h2 class="font-normal text-center text-lg md:text-2xl mb-6 md:mb-10">Dilaksanakan Secara OFFLINE</h2>
                 <hr class="w-10/12 mx-auto">
                 <br><br><br>
-                <div class="grid grid-cols-[150px_auto] md:grid-cols-[200px_auto] lg:grid-cols-[300px_auto] gap-y-12 text-white">
-                    <div class="font-bold text-base md:text-xl">Judul Buku</div>
-                    <div>: Pojok Ruang</div>
+                <table
+                    class="border-separate border-spacing-y-4 border-spacing-5 text-left text-white">
+                    <tr>
+                        <td class="font-bold text-sm md:text-xl align-top">Judul Buku</td>
+                        <td class="text-sm text-justify align-top">Pojok Ruang</td>
+                    </tr>
 
+                    <tr>
 
-                    <div class="font-bold text-base md:text-xl">Penulis</div>
-                    <div class="text-sm text-justify">: Finder 7: Mindspace</div>
+                        <td class="font-bold text-sm md:text-xl align-top">Penulis</td>
+                        <td class="text-sm text-justify align-top">Finder 7: Mindspace</td>
+                    </tr>
 
+                    <tr>
 
-                    <div class="font-bold text-base md:text-xl">Genre/Kategori</div>
-                    <div class="text-sm text-justify">: Fiksi, drama, psikologi</div>
+                        <td class="font-bold text-sm md:text-xl align-top">Genre / Kategori</td>
+                        <td class="text-sm text-justify align-top">Fiksi, drama, psikologi</td>
+                    </tr>
 
+                    <tr>
 
-                    <div class="font-bold text-base md:text-xl">Target Audiens</div>
-                    <div class="text-sm text-justify">: Semua umur, menjangkau orang-orang yang membutuhkan pemahaman tentang alam pikir mereka dan
-                        memperkenalkan lebih dalam alam pikir dengan wujud-wujud karakter yang ada di Finder 7.</div>
+                        <td class="font-bold text-sm md:text-xl align-top">Target Audiens</td>
+                        <td class="text-sm text-justify align-top">Semua umur, menjangkau orang-orang yang membutuhkan pemahaman
+                            tentang alam pikir mereka dan
+                            memperkenalkan lebih dalam alam pikir dengan wujud-wujud karakter yang ada di Finder 7.</td>
+                    </tr>
 
+                    <tr>
 
-                    <div class="font-bold text-base md:text-xl">Sinopsis buku</div>
-                    <div class="text-sm text-justify">: Mengulik sisi pikiran manusia yang rumit dengan storytelling bak novel. Di buku ini,
-                        menceritakan satu persatu karakter maskot Finder 7: Mindspace dan bagaimana mereka setiap
-                        harinya mengambil peran dalam alam pikir manusia. Hingga suatu saat, si Pemilik Ruang mengalami
-                        konflik batin yang menyebabkan alam pikirnya tercerai-berai, tidak lagi satu kesatuan.</div>
+                        <td class="font-bold text-sm md:text-xl align-top">Sinopsis buku</td>
+                        <td class="text-sm text-justify align-top">Mengulik sisi pikiran manusia yang rumit dengan storytelling
+                            bak
+                            novel. Di buku ini,
+                            menceritakan satu persatu karakter maskot Finder 7: Mindspace dan bagaimana mereka setiap
+                            harinya mengambil peran dalam alam pikir manusia. Hingga suatu saat, si Pemilik Ruang
+                            mengalami
+                            konflik batin yang menyebabkan alam pikirnya tercerai-berai, tidak lagi satu kesatuan.</td>
+                    </tr>
 
+                    <tr>
 
-                    <div class="font-bold text-base md:text-xl">Nuansa yang diharapkan</div>
-                    <div class="text-sm text-justify">: Dramatis, lembut, menyentuh, sedikit dark.</div>
+                        <td class="font-bold text-sm md:text-xl align-top">Nuansa yang diharapkan</td>
+                        <td class="text-sm text-justify align-top">Dramatis, lembut, menyentuh, sedikit dark.</td>
+                    </tr>
 
+                    <tr>
 
-                    <div class="font-bold text-base md:text-xl">Referensi Visual</div>
-                    <div class="text-sm text-justify">: https://pin.it/1OzikV3vA</div>
+                        <td class="font-bold text-sm md:text-xl align-top">Referensi Visual</td>
+                        <td class="text-sm text-justify align-top">https://pin.it/1OzikV3vA</td>
+                    </tr>
 
+                    <tr>
 
-                    <div class="font-bold text-base md:text-xl">Elemen Wajib</div>
-                    <div class="text-sm text-justify">
-                        <li>Judul buku</li>
-                        <li>Pencatutan nama Finder 7: Mindspace sebagai penulis</li>
-                        <li>Logo Finder 7: Mindspace dan Wacom Indonesia</li>
-                        <li>Blurb/sinopsis (untuk back cover)</li>
-                        <li>Barcode (untuk back cover, menyusul)</li>
-                    </div>
+                        <td class="font-bold text-sm md:text-xl align-top">Elemen Wajib</td>
+                        <td class="text-sm text-justify align-top">
+                            <ol class="list-disc list-outside pl-4">
 
+                                <li>Judul buku</li>
+                                <li>Pencatutan nama Finder 7: Mindspace sebagai penulis</li>
+                                <li>Logo Finder 7: Mindspace dan Wacom Indonesia</li>
+                                <li>Blurb/sinopsis (untuk back cover)</li>
+                                <li>Barcode (untuk back cover, menyusul)</li>
+                            </ol>
+                        </td>
+                    </tr>
 
-                    <div class="font-bold text-base md:text-xl">Warna yang diharapkan</div>
-                    <div class="text-sm text-justify">: Menyesuaikan GSM Finder 7: Mindspace. Download di sini.</div>
+                    <tr>
 
+                        <td class="font-bold text-sm md:text-xl align-top">Warna yang diharapkan</td>
+                        <td class="text-sm text-justify align-top">Menyesuaikan GSM Finder 7: Mindspace. Download di sini.</td>
+                    </tr>
 
-                    <div class="font-bold text-base md:text-xl">Gaya Tipografi</div>
-                    <div class="text-sm text-justify">: Handwritten/cursive/dekoratif.</div>
+                    <tr>
 
+                        <td class="font-bold text-sm md:text-xl align-top">Gaya Tipografi</td>
+                        <td class="text-sm text-justify align-top">Handwritten / cursive / dekoratif.</td>
+                    </tr>
 
-                    <div class="font-bold text-base md:text-xl">Format & Ukuran</div>
-                    <div class="text-sm text-justify">: 13 x 19 cm, spine tebal 1,5 cm, margin safe area kanan-kiri-atas-bawah 1 cm</div>
+                    <tr>
 
+                        <td class="font-bold text-sm md:text-xl align-top">Format & Ukuran</td>
+                        <td class="text-sm text-justify align-top">13 x 19 cm, spine tebal 1,5 cm, margin safe area
+                            kanan-kiri-atas-bawah 1 cm</td>
+                    </tr>
 
-                    <div class="font-bold text-base md:text-xl">Output yang diharapkan</div>
-                    <div class="text-sm text-justify">: PDF (CMYK 300dpi)</div>
+                    <tr>
 
-
-                </div>
+                        <td class="font-bold text-sm md:text-xl align-top">Output yang diharapkan</td>
+                        <td class="text-sm text-justify align-top">PDF (CMYK 300dpi)</td>
+                    </tr>
+                </table>
             </div>
         </section>
     </div>
