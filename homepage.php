@@ -307,7 +307,7 @@ mysqli_close($koneksi);
       <p class="sm:text-xl md:text-2xl text-gray-300 text-center md:text-left">
         think the unthinkable
       </p>
-      <div class="flex flex-col gap-4 items-center md:items-left">
+      <div class="flex flex-col gap-4 md:items-left">
         <a href="https://www.instagram.com/finder_dkv/"
           class="w-48 sm:w-64 h-12 sm:h-16 flex items-center justify-center bg-[#008C62] text-white text-lg sm:text-xl font-medium rounded-xl sm:rounded-[20px] shadow-md hover:scale-105 transition-transform duration-300">
           Instagram
